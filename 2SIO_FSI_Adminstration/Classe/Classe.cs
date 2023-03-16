@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2SIO_FSI_Adminstration.Classe
 {
-    internal class Classe
+    public class Classe
     {
         private int idClasse;
         private string libelleClasse; 
