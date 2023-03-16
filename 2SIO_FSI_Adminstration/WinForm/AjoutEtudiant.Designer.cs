@@ -46,7 +46,7 @@
             // 
             this.lNom.AutoSize = true;
             this.lNom.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lNom.Location = new System.Drawing.Point(42, 54);
+            this.lNom.Location = new System.Drawing.Point(29, 68);
             this.lNom.Name = "lNom";
             this.lNom.Size = new System.Drawing.Size(83, 39);
             this.lNom.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             this.lPrenom.AutoSize = true;
             this.lPrenom.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lPrenom.Location = new System.Drawing.Point(13, 114);
+            this.lPrenom.Location = new System.Drawing.Point(12, 147);
             this.lPrenom.Name = "lPrenom";
             this.lPrenom.Size = new System.Drawing.Size(124, 39);
             this.lPrenom.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Location = new System.Drawing.Point(30, 176);
+            this.label1.Location = new System.Drawing.Point(13, 216);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 39);
             this.label1.TabIndex = 2;
@@ -74,25 +74,25 @@
             // 
             // tbAENom
             // 
-            this.tbAENom.Location = new System.Drawing.Point(123, 41);
+            this.tbAENom.Location = new System.Drawing.Point(159, 54);
             this.tbAENom.Name = "tbAENom";
-            this.tbAENom.Size = new System.Drawing.Size(190, 53);
+            this.tbAENom.Size = new System.Drawing.Size(226, 53);
             this.tbAENom.TabIndex = 3;
             // 
             // tbAEPrenom
             // 
-            this.tbAEPrenom.Location = new System.Drawing.Point(123, 101);
+            this.tbAEPrenom.Location = new System.Drawing.Point(159, 133);
             this.tbAEPrenom.Name = "tbAEPrenom";
-            this.tbAEPrenom.Size = new System.Drawing.Size(190, 53);
+            this.tbAEPrenom.Size = new System.Drawing.Size(226, 53);
             this.tbAEPrenom.TabIndex = 4;
             // 
             // bouton1
             // 
             this.bouton1.BackColor = System.Drawing.Color.Honeydew;
             this.bouton1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.bouton1.Location = new System.Drawing.Point(2, 238);
+            this.bouton1.Location = new System.Drawing.Point(131, 327);
             this.bouton1.Name = "bouton1";
-            this.bouton1.Size = new System.Drawing.Size(159, 40);
+            this.bouton1.Size = new System.Drawing.Size(174, 55);
             this.bouton1.TabIndex = 6;
             this.bouton1.Text = "Ajouter";
             this.bouton1.UseVisualStyleBackColor = false;
@@ -102,9 +102,9 @@
             // 
             this.bouton2.BackColor = System.Drawing.Color.Honeydew;
             this.bouton2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.bouton2.Location = new System.Drawing.Point(91, 300);
+            this.bouton2.Location = new System.Drawing.Point(457, 462);
             this.bouton2.Name = "bouton2";
-            this.bouton2.Size = new System.Drawing.Size(164, 40);
+            this.bouton2.Size = new System.Drawing.Size(172, 54);
             this.bouton2.TabIndex = 7;
             this.bouton2.Text = "Retour";
             this.bouton2.UseVisualStyleBackColor = false;
@@ -124,9 +124,9 @@
             // 
             this.bouton3.BackColor = System.Drawing.Color.Honeydew;
             this.bouton3.ForeColor = System.Drawing.Color.DarkGreen;
-            this.bouton3.Location = new System.Drawing.Point(175, 238);
+            this.bouton3.Location = new System.Drawing.Point(360, 336);
             this.bouton3.Name = "bouton3";
-            this.bouton3.Size = new System.Drawing.Size(159, 40);
+            this.bouton3.Size = new System.Drawing.Size(172, 55);
             this.bouton3.TabIndex = 9;
             this.bouton3.Text = "Effacer";
             this.bouton3.UseVisualStyleBackColor = false;
@@ -136,9 +136,9 @@
             // 
             this.cbClasse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClasse.FormattingEnabled = true;
-            this.cbClasse.Location = new System.Drawing.Point(123, 173);
+            this.cbClasse.Location = new System.Drawing.Point(159, 208);
             this.cbClasse.Name = "cbClasse";
-            this.cbClasse.Size = new System.Drawing.Size(190, 47);
+            this.cbClasse.Size = new System.Drawing.Size(446, 47);
             this.cbClasse.TabIndex = 10;
             this.cbClasse.SelectedIndexChanged += new System.EventHandler(this.cbClasse_SelectedIndexChanged);
             // 
@@ -147,7 +147,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(346, 393);
+            this.ClientSize = new System.Drawing.Size(656, 541);
             this.Controls.Add(this.cbClasse);
             this.Controls.Add(this.bouton3);
             this.Controls.Add(this.pictureBox1);

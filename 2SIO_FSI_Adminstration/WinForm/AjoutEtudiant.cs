@@ -98,28 +98,28 @@ namespace _2SIO_FSI_Adminstration.WinForm
             NpgsqlConnection MyCnx = new NpgsqlConnection(Conx);
             MyCnx = new NpgsqlConnection(Conx);
             MyCnx.Open();
-            string select = "SELECT libelleclasse FROM classe";
+            string select = "SELECT * FROM classe";
             NpgsqlCommand MyCmd = new NpgsqlCommand(select, MyCnx);
             NpgsqlDataReader dr = MyCmd.ExecuteReader();
 
 
-            List<Etd> mesCLasses = new List<Classe>();
+            List<Classes> mesCLasses = new List<Classes>();
             while (dr.Read())
             {
                 // Création de l'objet etudiant
-                int idEtudiant = dr.GetInt32(0);
-                string nomEtudiant = dr.GetString(1);
-                string prenomEtudiant = dr.GetString(2);
+                int idclasse = dr.GetInt32(0);
+                string libelleclasse = dr.GetString(1);
+    ;
 
-                Etudiant unEtudiant = new Etudiant(idEtudiant, nomEtudiant, prenomEtudiant);
-                mesEtudiant.Add(unEtudiant);
+                Classes uneClasse = new Classes(idclasse, libelleclasse);
+                mesCLasses.Add(uneClasse);
 
             }
 
             //Affichage dans le dataGridView
-            foreach (Etudiant etu in mesEtudiant)
+            foreach (Classes cl in mesCLasses)
             {
-                dgvEtudiants.Rows.Add(etu.NomEtudiant, etu.PrenomEtudiant);
+                cbClasse.Items.Add(cl.LibelleClasse);
 
             }
 
