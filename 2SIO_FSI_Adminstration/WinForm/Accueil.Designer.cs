@@ -42,9 +42,9 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.bQuitter = new System.Windows.Forms.Button();
             this.PanelInterieur = new System.Windows.Forms.Panel();
+            this.tbUserConnecte2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lBien = new System.Windows.Forms.Label();
-            this.tbUserConnecte2 = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             this.msGlobal.SuspendLayout();
             this.PanelLogo.SuspendLayout();
@@ -62,7 +62,6 @@
             // 
             // msGlobal
             // 
-            this.msGlobal.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.msGlobal.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.msGlobal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accueilToolStripMenuItem2,
@@ -70,14 +69,14 @@
             this.gestionClasseToolStripMenuItem});
             this.msGlobal.Location = new System.Drawing.Point(0, 0);
             this.msGlobal.Name = "msGlobal";
-            this.msGlobal.Size = new System.Drawing.Size(806, 33);
+            this.msGlobal.Size = new System.Drawing.Size(806, 28);
             this.msGlobal.TabIndex = 0;
             this.msGlobal.Text = "Menu";
             // 
             // accueilToolStripMenuItem2
             // 
             this.accueilToolStripMenuItem2.Name = "accueilToolStripMenuItem2";
-            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 29);
+            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(71, 24);
             this.accueilToolStripMenuItem2.Text = "Accueil";
             // 
             // gestionEtudiantToolStripMenuItem1
@@ -86,20 +85,20 @@
             this.listeDesEtudiantsToolStripMenuItem,
             this.ajouterUnEtudiantToolStripMenuItem});
             this.gestionEtudiantToolStripMenuItem1.Name = "gestionEtudiantToolStripMenuItem1";
-            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(158, 29);
+            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(132, 24);
             this.gestionEtudiantToolStripMenuItem1.Text = "Gestion Etudiant";
             // 
             // listeDesEtudiantsToolStripMenuItem
             // 
             this.listeDesEtudiantsToolStripMenuItem.Name = "listeDesEtudiantsToolStripMenuItem";
-            this.listeDesEtudiantsToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
+            this.listeDesEtudiantsToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.listeDesEtudiantsToolStripMenuItem.Text = "Liste des étudiants";
             this.listeDesEtudiantsToolStripMenuItem.Click += new System.EventHandler(this.listeDesEtudiantsToolStripMenuItem_Click);
             // 
             // ajouterUnEtudiantToolStripMenuItem
             // 
             this.ajouterUnEtudiantToolStripMenuItem.Name = "ajouterUnEtudiantToolStripMenuItem";
-            this.ajouterUnEtudiantToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
+            this.ajouterUnEtudiantToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.ajouterUnEtudiantToolStripMenuItem.Text = "Ajouter un étudiant";
             this.ajouterUnEtudiantToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnEtudiantToolStripMenuItem_Click);
             // 
@@ -109,19 +108,19 @@
             this.listeDesClassesToolStripMenuItem,
             this.ajouterUneClasseToolStripMenuItem});
             this.gestionClasseToolStripMenuItem.Name = "gestionClasseToolStripMenuItem";
-            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
+            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.gestionClasseToolStripMenuItem.Text = "Gestion classe";
             // 
             // listeDesClassesToolStripMenuItem
             // 
             this.listeDesClassesToolStripMenuItem.Name = "listeDesClassesToolStripMenuItem";
-            this.listeDesClassesToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
+            this.listeDesClassesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.listeDesClassesToolStripMenuItem.Text = "Liste des classes";
             // 
             // ajouterUneClasseToolStripMenuItem
             // 
             this.ajouterUneClasseToolStripMenuItem.Name = "ajouterUneClasseToolStripMenuItem";
-            this.ajouterUneClasseToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
+            this.ajouterUneClasseToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.ajouterUneClasseToolStripMenuItem.Text = "Ajouter une classe";
             // 
             // PanelLogo
@@ -165,6 +164,17 @@
             this.PanelInterieur.Size = new System.Drawing.Size(879, 543);
             this.PanelInterieur.TabIndex = 11;
             // 
+            // tbUserConnecte2
+            // 
+            this.tbUserConnecte2.AutoSize = true;
+            this.tbUserConnecte2.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUserConnecte2.ForeColor = System.Drawing.Color.Green;
+            this.tbUserConnecte2.Location = new System.Drawing.Point(531, 156);
+            this.tbUserConnecte2.Name = "tbUserConnecte2";
+            this.tbUserConnecte2.Size = new System.Drawing.Size(89, 29);
+            this.tbUserConnecte2.TabIndex = 15;
+            this.tbUserConnecte2.Text = "label2";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -172,7 +182,7 @@
             this.label1.ForeColor = System.Drawing.Color.Green;
             this.label1.Location = new System.Drawing.Point(228, 304);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(806, 35);
+            this.label1.Size = new System.Drawing.Size(666, 29);
             this.label1.TabIndex = 14;
             this.label1.Text = "Application de gestion administration de l\'école FSI";
             // 
@@ -183,24 +193,13 @@
             this.lBien.ForeColor = System.Drawing.Color.Green;
             this.lBien.Location = new System.Drawing.Point(385, 156);
             this.lBien.Name = "lBien";
-            this.lBien.Size = new System.Drawing.Size(219, 35);
+            this.lBien.Size = new System.Drawing.Size(180, 29);
             this.lBien.TabIndex = 13;
             this.lBien.Text = "BIENVENUE ";
             // 
-            // tbUserConnecte2
-            // 
-            this.tbUserConnecte2.AutoSize = true;
-            this.tbUserConnecte2.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUserConnecte2.ForeColor = System.Drawing.Color.Green;
-            this.tbUserConnecte2.Location = new System.Drawing.Point(531, 156);
-            this.tbUserConnecte2.Name = "tbUserConnecte2";
-            this.tbUserConnecte2.Size = new System.Drawing.Size(107, 35);
-            this.tbUserConnecte2.TabIndex = 15;
-            this.tbUserConnecte2.Text = "label2";
-            // 
             // Accueil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 39F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 624);
@@ -211,6 +210,7 @@
             this.Font = new System.Drawing.Font("MV Boli", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ForeColor = System.Drawing.Color.Blue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Accueil";
             this.Text = "ACCUEIL";

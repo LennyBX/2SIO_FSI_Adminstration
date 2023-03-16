@@ -23,7 +23,7 @@ namespace _2SIO_FSI_Adminstration.WinForm
             {
                 if (database.authentify(loginUti, mdpUti) == true)
                 {
-                    Utilisateur utilisateur = database.GetUtilisateur(loginUti);
+                    Utilisateur utilisateur = database.getUtilisateur(loginUti);
                     this.Hide();
                     Form formAccueil = new Accueil(utilisateur);
                     formAccueil.Show();

@@ -54,7 +54,7 @@
             this.lLogin.ForeColor = System.Drawing.Color.Green;
             this.lLogin.Location = new System.Drawing.Point(267, 33);
             this.lLogin.Name = "lLogin";
-            this.lLogin.Size = new System.Drawing.Size(91, 39);
+            this.lLogin.Size = new System.Drawing.Size(76, 31);
             this.lLogin.TabIndex = 1;
             this.lLogin.Text = "Login";
             // 
@@ -64,7 +64,7 @@
             this.lMDP.ForeColor = System.Drawing.Color.Green;
             this.lMDP.Location = new System.Drawing.Point(186, 79);
             this.lMDP.Name = "lMDP";
-            this.lMDP.Size = new System.Drawing.Size(212, 39);
+            this.lMDP.Size = new System.Drawing.Size(181, 31);
             this.lMDP.TabIndex = 2;
             this.lMDP.Text = "Mot de passe";
             // 
@@ -72,7 +72,7 @@
             // 
             this.tbLogin.Location = new System.Drawing.Point(349, 20);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(197, 53);
+            this.tbLogin.Size = new System.Drawing.Size(197, 46);
             this.tbLogin.TabIndex = 3;
             // 
             // tbMdp
@@ -80,7 +80,7 @@
             this.tbMdp.Location = new System.Drawing.Point(349, 66);
             this.tbMdp.Name = "tbMdp";
             this.tbMdp.PasswordChar = '*';
-            this.tbMdp.Size = new System.Drawing.Size(197, 53);
+            this.tbMdp.Size = new System.Drawing.Size(197, 46);
             this.tbMdp.TabIndex = 4;
             // 
             // bConnexion
@@ -97,7 +97,7 @@
             // 
             // Connexion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 39F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(576, 176);
@@ -110,6 +110,7 @@
             this.Font = new System.Drawing.Font("MV Boli", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Blue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Connexion";
             this.Text = "CONNEXION";

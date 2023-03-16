@@ -45,7 +45,7 @@ namespace _2SIO_FSI_Adminstration.Classe
             return utilisateurs;
         }
 
-        public Utilisateur GetUtilisateur(String username)
+        public Utilisateur getUtilisateur(String username)
         {
             List<Utilisateur > utilisateurs = getAllUtilisateurs();
             foreach(Utilisateur utilisateur in utilisateurs)
@@ -75,7 +75,7 @@ namespace _2SIO_FSI_Adminstration.Classe
             bool authentified = isRegistered(username);
             if (authentified == true)
             {
-                if (GetUtilisateur(username).MdpUtilisateur == password)
+                if (getUtilisateur(username).MdpUtilisateur == password)
                 {
                     return true;
                 }
