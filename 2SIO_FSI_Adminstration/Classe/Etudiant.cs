@@ -23,7 +23,7 @@ namespace _2SIO_FSI_Adminstration.Classe
         public int IdEtudiant { get => idEtudiant; set => idEtudiant = value; }
         public string NomEtudiant { get => nomEtudiant; set => nomEtudiant = value; }
         public string PrenomEtudiant { get => prenomEtudiant; set => prenomEtudiant = value; }
-        public string IdClasse { get => idClasse; set => idClasse = value; }
+        public int IdClasse { get => idClasse; set => idClasse = value; }
 
         public override string ToString()
         {

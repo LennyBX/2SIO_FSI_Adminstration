@@ -8,6 +8,8 @@ namespace _2SIO_FSI_Adminstration.WinForm
 {
     public partial class Connexion : Form
     {
+        Database database = new Database();
+
         public Connexion()
         {
             InitializeComponent();
@@ -17,44 +19,25 @@ namespace _2SIO_FSI_Adminstration.WinForm
         {
             string loginUti = tbLogin.Text;
             string mdpUti = tbMdp.Text;
-            //Contrôle de la connexion
-            string Conx = "Server=localhost;Port=5432;Database=FSI_Gestion;User Id=postgres;Password=pgadmin;";
-            NpgsqlConnection MyCnx = new NpgsqlConnection(Conx);
-            MyCnx = new NpgsqlConnection(Conx);
-            MyCnx.Open();
-            string select = "SELECT * FROM utilisateur where loginutilisateur = :login;";
-            NpgsqlCommand MyCmd = new NpgsqlCommand(select, MyCnx);
-            MyCmd.Parameters.Add(new NpgsqlParameter("login", NpgsqlDbType.Varchar)).Value = loginUti;
-            NpgsqlDataReader dr = MyCmd.ExecuteReader();
-
-            if (dr.Read())
+            if(database.isRegistered(loginUti) == true)
             {
-                // Création de l'objet utilisateur
-                int idUti = dr.GetInt32(0);
-                loginUti = dr.GetString(1);
-                mdpUti = dr.GetString(2);
-                Utilisateur uti = new Utilisateur(idUti, loginUti, mdpUti);
-
-                //Ouverture du formulaire d'accueil si la connexion est ok
-                this.Hide();
-                Form formAccueil = new Accueil(uti);
-                formAccueil.Show();
-            }
-            else
+                if (database.authentify(loginUti, mdpUti) == true)
+                {
+                    Utilisateur utilisateur = database.GetUtilisateur(loginUti);
+                    this.Hide();
+                    Form formAccueil = new Accueil(utilisateur);
+                    formAccueil.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Le mot de passe est incorrect !");
+                    tbLogin.Text = "";
+                    tbMdp.Text = "";
+                }
+            } else
             {
-                MessageBox.Show("Erreur d'authentification");
-                tbLogin.Text = "";
-                tbMdp.Text = "";
+                MessageBox.Show("Vous n'êtes pas enregistré dans la bdd !");
             }
-
-            MyCnx.Close();
-
-
-
-
-
         }
-
-
     }
 }

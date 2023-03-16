@@ -92,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classe\Array.cs" />
-    <Compile Include="Classe\Classe.cs" />
+    <Compile Include="Classe\Classes.cs" />
     <Compile Include="Classe\Database.cs" />
     <Compile Include="Classe\Etudiant.cs" />
     <Compile Include="WinForm\Accueil.cs">

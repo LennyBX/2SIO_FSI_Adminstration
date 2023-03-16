@@ -24,24 +24,64 @@ namespace _2SIO_FSI_Adminstration.Classe
         {
             String connectionString = "Server=" + hostname + ";Port=" + port + ";Database=" + database + ";User Id=" + user + ";Password=" + password + ";";
             npgsqlConnection = new NpgsqlConnection(connectionString);
-            npgsqlConnection.Open();
         }
 
-        public Array<Utilisateur> getAllUtilisateurs()
+        public List<Utilisateur> getAllUtilisateurs()
         {
-            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM etudiant;", npgsqlConnection);
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM utilisateur;", npgsqlConnection);
             NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();
 
-            Array<Utilisateur> utilisateurs = new Array<Utilisateur>();
+            List<Utilisateur> utilisateurs = new List<Utilisateur>();
             while (npgsqlDataReader.Read())
             {
-                int idUti = dr.GetInt32(0);
-                loginUti = dr.GetString(1);
-                mdpUti = dr.GetString(2);
-                Utilisateur utilisateur = new Utilisateur(idUti, loginUti, mdpUti);
+                int idUser = npgsqlDataReader.GetInt32(0);
+                String loginUser = npgsqlDataReader.GetString(1);
+                String passwordUser = npgsqlDataReader.GetString(2);
+                Utilisateur utilisateur = new Utilisateur(idUser, loginUser, passwordUser);
                 utilisateurs.Add(utilisateur);
             }
+            npgsqlConnection.Close();
             return utilisateurs;
         }
+
+        public Utilisateur GetUtilisateur(String username)
+        {
+            List<Utilisateur > utilisateurs = getAllUtilisateurs();
+            foreach(Utilisateur utilisateur in utilisateurs)
+            {
+                if(utilisateur.LoginUtilisateur == username)
+                {
+                    return utilisateur;
+                }
+            }
+            return null;
+        }
+
+        public Boolean isRegistered(String username)
+        {
+            List<Utilisateur> utilisateurs = getAllUtilisateurs();
+            foreach(Utilisateur user in utilisateurs) {
+                if(user.LoginUtilisateur == username)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public Boolean authentify(String username, String password)
+        {
+            bool authentified = isRegistered(username);
+            if (authentified == true)
+            {
+                if (GetUtilisateur(username).MdpUtilisateur == password)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }
