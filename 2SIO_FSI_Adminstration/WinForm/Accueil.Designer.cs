@@ -229,17 +229,17 @@
         #endregion
         private System.Windows.Forms.Panel PanelMenu;
         private System.Windows.Forms.MenuStrip msGlobal;
-  //      private System.Windows.Forms.Panel panel2;
+        //      private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem accueilToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem gestionEtudiantToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listeDesEtudiantsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUnEtudiantToolStripMenuItem;
         private System.Windows.Forms.Panel PanelLogo;
         private System.Windows.Forms.PictureBox pbLogo;
-   //     private System.Windows.Forms.Button bDeConnexion;
+        //     private System.Windows.Forms.Button bDeConnexion;
         private System.Windows.Forms.Panel PanelInterieur;
-    //    private System.Windows.Forms.Label lTexteBienvenue;
-   //     private System.Windows.Forms.Label lBienvenue;
+        //    private System.Windows.Forms.Label lTexteBienvenue;
+        //     private System.Windows.Forms.Label lBienvenue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lBien;
         private System.Windows.Forms.Button bQuitter;

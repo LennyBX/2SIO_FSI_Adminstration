@@ -27,26 +27,21 @@ namespace _2SIO_FSI_Adminstration.Classe
             npgsqlConnection.Open();
         }
 
-        public Array<Etudiant> getAllEtudiant()
+        public Array<Utilisateur> getAllUtilisateurs()
         {
-            NpgsqlCommand MyCmd = new NpgsqlCommand("SELECT * FROM :table;", npgsqlConnection);
-            MyCmd.Parameters.Add(new NpgsqlParameter("table", NpgsqlDbType.Varchar)).Value = table;
-            NpgsqlDataReader npgsqlDataReader = MyCmd.ExecuteReader();
-            if (dr.Read())
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM etudiant;", npgsqlConnection);
+            NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();
+
+            Array<Utilisateur> utilisateurs = new Array<Utilisateur>();
+            while (npgsqlDataReader.Read())
             {
                 int idUti = dr.GetInt32(0);
                 loginUti = dr.GetString(1);
                 mdpUti = dr.GetString(2);
-                Utilisateur uti = new Utilisateur(idUti, loginUti, mdpUti);
-
-                //Ouverture du formulaire d'accueil si la connexion est ok
-                this.Hide();
-                Form formAccueil = new Accueil(uti);
-                formAccueil.Show();
+                Utilisateur utilisateur = new Utilisateur(idUti, loginUti, mdpUti);
+                utilisateurs.Add(utilisateur);
             }
-
-            return null;
+            return utilisateurs;
         }
-
     }
 }

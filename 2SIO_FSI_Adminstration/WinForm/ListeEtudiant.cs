@@ -1,14 +1,7 @@
 ﻿using _2SIO_FSI_Adminstration.Classe;
 using Npgsql;
-using NpgsqlTypes;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _2SIO_FSI_Adminstration.WinForm
@@ -18,12 +11,12 @@ namespace _2SIO_FSI_Adminstration.WinForm
         Utilisateur x;
         public ListeEtudiant(Utilisateur utiConnecte)
         {
-        InitializeComponent();
+            InitializeComponent();
             x = utiConnecte;
             Form formAccueil = new Accueil(x);
             formAccueil.Close();
-            
-          
+
+
 
             //Contrôle de la connexion
             string Conx = "Server=localhost;Port=5432;Database=FSI_Gestion;User Id=postgres;Password=pgadmin;";
@@ -48,12 +41,12 @@ namespace _2SIO_FSI_Adminstration.WinForm
             }
 
             //Affichage dans le dataGridView
-            foreach(Etudiant etu in mesEtudiant)
+            foreach (Etudiant etu in mesEtudiant)
             {
-                dgvEtudiants.Rows.Add(etu.NomEtudiant,etu.PrenomEtudiant);
+                dgvEtudiants.Rows.Add(etu.NomEtudiant, etu.PrenomEtudiant);
 
             }
-         
+
 
             MyCnx.Close();
 
