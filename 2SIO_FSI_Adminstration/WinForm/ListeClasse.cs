@@ -1,30 +1,44 @@
 ﻿using _2SIO_FSI_Adminstration.Classe;
-using _2SIO_FSI_Adminstration.WinForm;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace _2SIO_FSI_Adminstration
+namespace _2SIO_FSI_Adminstration.WinForm
 {
-    public partial class Accueil : Form
+    public partial class ListeClasse : Form
     {
+        Database database = new Database();
         Utilisateur utilisateur;
 
-        public Accueil(Utilisateur utilisateur1)
+        public ListeClasse(Utilisateur utilisateur1)
         {
             InitializeComponent();
             utilisateur = utilisateur1;
-            tbUser.Text = utilisateur1.LoginUtilisateur;
+            foreach (Classe.Classe classe in database.getAllClasses())
+            {
+                dgvEtudiants.Rows.Add(classe.LibelleClasse);
+            }
         }
 
         private void bQuitter_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void bFermer_Click(object sender, EventArgs e)
+        {
             this.Close();
-            Form connectionForm = new Connexion();
-            connectionForm.Show();
+            Form formAccueil = new Accueil(utilisateur);
+            formAccueil.Show();
         }
 
         /// Début du code des ToolStripMenu.
+        private void accueilToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form formAccueil = new Accueil(utilisateur);
+            formAccueil.Show();
+        }
+
         private void listeDesEtudiantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -37,13 +51,6 @@ namespace _2SIO_FSI_Adminstration
             this.Close();
             Form formAjouterEtudiant = new AjoutEtudiant(utilisateur);
             formAjouterEtudiant.Show();
-        }
-
-        private void listeDesClassesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Form formListeClasse = new ListeClasse(utilisateur);
-            formListeClasse.Show();
         }
 
         private void ajouterUneClasseToolStripMenuItem_Click(object sender, EventArgs e)

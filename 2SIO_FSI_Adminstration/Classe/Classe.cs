@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace _2SIO_FSI_Adminstration.Classe
 {
-    public class Classes
+    public class Classe
     {
         private int idClasse;
         private string libelleClasse; 
 
-        public Classes(int idClasse, string libelleClasse)
+        public Classe() { }
+
+        public Classe(int idClasse, string libelleClasse)
         {
             this.idClasse = idClasse;
             this.libelleClasse = libelleClasse;

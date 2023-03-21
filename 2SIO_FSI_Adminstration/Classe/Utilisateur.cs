@@ -12,6 +12,8 @@ namespace _2SIO_FSI_Adminstration.Classe
         private string loginUtilisateur;
         private string mdpUtilisateur;
 
+        public Utilisateur() { }
+
         public Utilisateur(int idUtilisateur, string loginUtilisateur, string mdpUtilisateur)
         {
             this.idUtilisateur = idUtilisateur;

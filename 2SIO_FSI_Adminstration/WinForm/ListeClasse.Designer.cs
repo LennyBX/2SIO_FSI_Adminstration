@@ -1,6 +1,6 @@
 ﻿namespace _2SIO_FSI_Adminstration.WinForm
 {
-    partial class ListeEtudiant
+    partial class ListeClasse
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListeEtudiant));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListeClasse));
             this.PanelLogo = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.bQuitter = new System.Windows.Forms.Button();
@@ -44,8 +44,6 @@
             this.PanelInterieur = new System.Windows.Forms.Panel();
             this.dgvEtudiants = new System.Windows.Forms.DataGridView();
             this.nomEtudiant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenomEtudiant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Classe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvListeEtudiant = new System.Windows.Forms.DataGridView();
             this.bFermer = new System.Windows.Forms.Button();
             this.PanelLogo.SuspendLayout();
@@ -78,7 +76,7 @@
             // bQuitter
             // 
             this.bQuitter.BackColor = System.Drawing.Color.Green;
-            this.bQuitter.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bQuitter.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bQuitter.ForeColor = System.Drawing.Color.Transparent;
             this.bQuitter.Location = new System.Drawing.Point(903, 12);
             this.bQuitter.Name = "bQuitter";
@@ -105,7 +103,7 @@
             this.gestionClasseToolStripMenuItem});
             this.msGlobal.Location = new System.Drawing.Point(0, 0);
             this.msGlobal.Name = "msGlobal";
-            this.msGlobal.Size = new System.Drawing.Size(806, 28);
+            this.msGlobal.Size = new System.Drawing.Size(806, 30);
             this.msGlobal.TabIndex = 0;
             this.msGlobal.Text = "Menu";
             // 
@@ -176,9 +174,7 @@
             this.dgvEtudiants.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvEtudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEtudiants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomEtudiant,
-            this.prenomEtudiant,
-            this.Classe});
+            this.nomEtudiant});
             this.dgvEtudiants.Location = new System.Drawing.Point(0, 3);
             this.dgvEtudiants.MultiSelect = false;
             this.dgvEtudiants.Name = "dgvEtudiants";
@@ -186,31 +182,14 @@
             this.dgvEtudiants.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvEtudiants.Size = new System.Drawing.Size(500, 281);
             this.dgvEtudiants.TabIndex = 1;
-            this.dgvEtudiants.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEtudiants_CellContentClick);
             // 
             // nomEtudiant
             // 
-            this.nomEtudiant.HeaderText = "Nom";
+            this.nomEtudiant.HeaderText = "Classe";
             this.nomEtudiant.MinimumWidth = 8;
             this.nomEtudiant.Name = "nomEtudiant";
             this.nomEtudiant.ReadOnly = true;
-            this.nomEtudiant.Width = 96;
-            // 
-            // prenomEtudiant
-            // 
-            this.prenomEtudiant.HeaderText = "Prénom";
-            this.prenomEtudiant.MinimumWidth = 8;
-            this.prenomEtudiant.Name = "prenomEtudiant";
-            this.prenomEtudiant.ReadOnly = true;
-            this.prenomEtudiant.Width = 132;
-            // 
-            // Classe
-            // 
-            this.Classe.HeaderText = "Classe";
-            this.Classe.MinimumWidth = 6;
-            this.Classe.Name = "Classe";
-            this.Classe.ReadOnly = true;
-            this.Classe.Width = 113;
+            this.nomEtudiant.Width = 113;
             // 
             // dgvListeEtudiant
             // 
@@ -237,7 +216,7 @@
             this.bFermer.UseVisualStyleBackColor = false;
             this.bFermer.Click += new System.EventHandler(this.bFermer_Click);
             // 
-            // ListeEtudiant
+            // ListeClasse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -248,13 +227,13 @@
             this.Controls.Add(this.PanelInterieur);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.PanelLogo);
-            this.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Blue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.Name = "ListeEtudiant";
-            this.Text = "Liste des Etudiants";
+            this.Name = "ListeClasse";
+            this.Text = "Liste des classes";
             this.PanelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.PanelMenu.ResumeLayout(false);
@@ -283,15 +262,13 @@
         private System.Windows.Forms.DataGridView dgvListeEtudiant;
         //   private P2022_Appli_AdministrationDataSetTableAdapters.etudiantTableAdapter etudiantTableAdapter;
         private System.Windows.Forms.Button bFermer;
-    //    private System.Windows.Forms.DataGridViewTextBoxColumn nometudiantDataGridViewTextBoxColumn;
-   //     private System.Windows.Forms.DataGridViewTextBoxColumn prenometudiantDataGridViewTextBoxColumn;
-    //    private System.Windows.Forms.DataGridViewTextBoxColumn idclasseDataGridViewTextBoxColumn;
+        //    private System.Windows.Forms.DataGridViewTextBoxColumn nometudiantDataGridViewTextBoxColumn;
+        //     private System.Windows.Forms.DataGridViewTextBoxColumn prenometudiantDataGridViewTextBoxColumn;
+        //    private System.Windows.Forms.DataGridViewTextBoxColumn idclasseDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem gestionClasseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeDesClassesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUneClasseToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvEtudiants;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomEtudiant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prenomEtudiant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Classe;
     }
 }

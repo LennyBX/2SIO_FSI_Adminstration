@@ -13,11 +13,14 @@ namespace _2SIO_FSI_Adminstration.Classe
         private string prenomEtudiant;
         private int idClasse;
 
-        public Etudiant(int id, string nom, string prenom)
+        public Etudiant() { }
+
+        public Etudiant(int id, string nom, string prenom, int idclasse)
         {
             this.idEtudiant = id;
             this.nomEtudiant = nom;
             this.prenomEtudiant = prenom;
+            this.idClasse = idclasse;
         }
 
         public int IdEtudiant { get => idEtudiant; set => idEtudiant = value; }

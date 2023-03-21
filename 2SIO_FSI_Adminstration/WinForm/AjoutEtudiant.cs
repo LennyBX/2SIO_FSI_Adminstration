@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using _2SIO_FSI_Adminstration.Classe;
+using Npgsql;
 using NpgsqlTypes;
 using System;
 using System.Collections.Generic;
@@ -15,95 +16,55 @@ namespace _2SIO_FSI_Adminstration.WinForm
 {
     public partial class AjoutEtudiant : Form
     {
-        NpgsqlConnection maConnexion;
-        NpgsqlCommand commande;
-        public AjoutEtudiant()
+
+        Database database = new Database();
+        Utilisateur utilisateur;
+
+        public AjoutEtudiant(Utilisateur utilisateur1)
         {
+            utilisateur = utilisateur1;
             InitializeComponent();
-
-        }
-        private void bouton1_Click(object sender, EventArgs e)
-        {
-            string a = tbAENom.Text;
-            string z = tbAEPrenom.Text;
-
-            if( a != "" && z != "")
-            {
-                try
-                {
-                    string connexion = "Server=localhost;Port=5432;Database=FSI_Gestion;User Id=postgres;Password=pgadmin;";
-                    maConnexion = new NpgsqlConnection(connexion);
-                    maConnexion = new NpgsqlConnection(connexion);
-                    maConnexion.Open();
-                    string pufff = "INSERT INTO etudiant (nomEtudiant, prenometudiant, idClasse) values ( :1, :2, 1);";
-                    commande = new NpgsqlCommand(pufff, maConnexion);
-                    commande.Parameters.Add(new NpgsqlParameter("1", NpgsqlDbType.Varchar)).Value = a;
-                    commande.Parameters.Add(new NpgsqlParameter("2", NpgsqlDbType.Varchar)).Value = z;
-                    commande.Prepare();
-                    commande.CommandType = CommandType.Text;
-                    commande.ExecuteNonQuery();
-                    MessageBox.Show("Etudiant ajouté");
-                    reInitialisation();
-                }
-                finally
-                {
-                    if (commande != null) commande.Dispose();
-                    if (maConnexion != null) maConnexion.Close();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Il manque des champs");
-            }
-   
-         
-
-
-
-        }
-        private void reInitialisation()
-        {
-            tbAENom.Text = "";
-            tbAEPrenom.Text = "";
-
-        }
-
-        private void bouton2_Click(object sender, EventArgs e)
-        {
-            reInitialisation();
-        }
-
-        private void bouton3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void cbClasse_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-
-         
-
-
         }
 
         private void AjoutEtudiant_Load(object sender, EventArgs e)
         {
+            foreach (Classe.Classe cl in database.getAllClasses())
+            {
+                cbClasse.Items.Add(cl.LibelleClasse);
 
-            string Conx = "Server=localhost;Port=5432;Database=FSI_Gestion;User Id=postgres;Password=pgadmin;";
-            NpgsqlConnection MyCnx = new NpgsqlConnection(Conx);
-            MyCnx = new NpgsqlConnection(Conx);
-            MyCnx.Open();
-            string select = "SELECT libelleclasse FROM classe";
-            NpgsqlCommand MyCmd = new NpgsqlCommand(select, MyCnx);
-            NpgsqlDataReader dr = MyCmd.ExecuteReader();
-     
+            }
+        }
 
+        private void bAddUser_Click(object sender, EventArgs e)
+        {
+            string nom = tbLastName.Text;
+            string prenom = tbFirstName.Text;
+            string classe = this.cbClasse.GetItemText(this.cbClasse.SelectedItem);
+            Classe.Classe classeObj = database.getClasse(classe);
 
-            cbClasse.DisplayMember = select;
-            cbClasse.ValueMember = select;
+            if (nom != "" && prenom != "" && classe != "")
+            {
+                database.newUtilisateur(nom, prenom, classeObj.IdClasse);
+                MessageBox.Show("Etudiant ajouté avec succès !");
+            }
+            else
+            {
+                MessageBox.Show("Un ou plusieurs champs sont manquants !");
+            }
 
+        }
+
+        private void bClearText_Click(object sender, EventArgs e)
+        {
+            tbLastName.Text = "";
+            tbFirstName.Text = "";
+        }
+
+        private void bBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form connectionForm = new Accueil(utilisateur);
+            connectionForm.Show();
         }
     }
 }

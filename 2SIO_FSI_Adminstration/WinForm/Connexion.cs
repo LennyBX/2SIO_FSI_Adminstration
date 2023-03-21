@@ -17,15 +17,15 @@ namespace _2SIO_FSI_Adminstration.WinForm
 
         private void bConnexion_Click(object sender, EventArgs e)
         {
-            string loginUti = tbLogin.Text;
-            string mdpUti = tbMdp.Text;
-            if(database.isRegistered(loginUti) == true)
+            string login = tbLogin.Text;
+            string password = tbMdp.Text;
+
+            if(database.isRegistered(login) == true)
             {
-                if (database.authentify(loginUti, mdpUti) == true)
+                if (database.authentify(login, password) == true)
                 {
-                    Utilisateur utilisateur = database.getUtilisateur(loginUti);
                     this.Hide();
-                    Form formAccueil = new Accueil(utilisateur);
+                    Form formAccueil = new Accueil(database.getUtilisateur(login));
                     formAccueil.Show();
                 }
                 else
@@ -36,7 +36,7 @@ namespace _2SIO_FSI_Adminstration.WinForm
                 }
             } else
             {
-                MessageBox.Show("Vous n'êtes pas enregistré dans la bdd !");
+                MessageBox.Show("Vous n'êtes pas enregistré dans la BDD !");
             }
         }
     }

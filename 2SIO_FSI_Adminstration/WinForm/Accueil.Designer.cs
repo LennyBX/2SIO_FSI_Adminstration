@@ -42,9 +42,9 @@
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.bQuitter = new System.Windows.Forms.Button();
             this.PanelInterieur = new System.Windows.Forms.Panel();
-            this.tbUserConnecte2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lBien = new System.Windows.Forms.Label();
+            this.tbUser = new System.Windows.Forms.Label();
+            this.lWelcomeSub = new System.Windows.Forms.Label();
+            this.lWelcome = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             this.msGlobal.SuspendLayout();
             this.PanelLogo.SuspendLayout();
@@ -85,20 +85,20 @@
             this.listeDesEtudiantsToolStripMenuItem,
             this.ajouterUnEtudiantToolStripMenuItem});
             this.gestionEtudiantToolStripMenuItem1.Name = "gestionEtudiantToolStripMenuItem1";
-            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(132, 24);
-            this.gestionEtudiantToolStripMenuItem1.Text = "Gestion Etudiant";
+            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
+            this.gestionEtudiantToolStripMenuItem1.Text = "Gestion des étudiants";
             // 
             // listeDesEtudiantsToolStripMenuItem
             // 
             this.listeDesEtudiantsToolStripMenuItem.Name = "listeDesEtudiantsToolStripMenuItem";
-            this.listeDesEtudiantsToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.listeDesEtudiantsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.listeDesEtudiantsToolStripMenuItem.Text = "Liste des étudiants";
             this.listeDesEtudiantsToolStripMenuItem.Click += new System.EventHandler(this.listeDesEtudiantsToolStripMenuItem_Click);
             // 
             // ajouterUnEtudiantToolStripMenuItem
             // 
             this.ajouterUnEtudiantToolStripMenuItem.Name = "ajouterUnEtudiantToolStripMenuItem";
-            this.ajouterUnEtudiantToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.ajouterUnEtudiantToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ajouterUnEtudiantToolStripMenuItem.Text = "Ajouter un étudiant";
             this.ajouterUnEtudiantToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnEtudiantToolStripMenuItem_Click);
             // 
@@ -108,20 +108,22 @@
             this.listeDesClassesToolStripMenuItem,
             this.ajouterUneClasseToolStripMenuItem});
             this.gestionClasseToolStripMenuItem.Name = "gestionClasseToolStripMenuItem";
-            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
-            this.gestionClasseToolStripMenuItem.Text = "Gestion classe";
+            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.gestionClasseToolStripMenuItem.Text = "Gestion des classes";
             // 
             // listeDesClassesToolStripMenuItem
             // 
             this.listeDesClassesToolStripMenuItem.Name = "listeDesClassesToolStripMenuItem";
-            this.listeDesClassesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.listeDesClassesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.listeDesClassesToolStripMenuItem.Text = "Liste des classes";
+            this.listeDesClassesToolStripMenuItem.Click += new System.EventHandler(this.listeDesClassesToolStripMenuItem_Click);
             // 
             // ajouterUneClasseToolStripMenuItem
             // 
             this.ajouterUneClasseToolStripMenuItem.Name = "ajouterUneClasseToolStripMenuItem";
-            this.ajouterUneClasseToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.ajouterUneClasseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ajouterUneClasseToolStripMenuItem.Text = "Ajouter une classe";
+            this.ajouterUneClasseToolStripMenuItem.Click += new System.EventHandler(this.ajouterUneClasseToolStripMenuItem_Click);
             // 
             // PanelLogo
             // 
@@ -144,58 +146,58 @@
             // bQuitter
             // 
             this.bQuitter.BackColor = System.Drawing.Color.Green;
-            this.bQuitter.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bQuitter.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bQuitter.ForeColor = System.Drawing.Color.Transparent;
             this.bQuitter.Location = new System.Drawing.Point(991, 541);
             this.bQuitter.Name = "bQuitter";
             this.bQuitter.Size = new System.Drawing.Size(178, 63);
             this.bQuitter.TabIndex = 7;
-            this.bQuitter.Text = "Deconnexion";
+            this.bQuitter.Text = "Déconnexion";
             this.bQuitter.UseVisualStyleBackColor = false;
             this.bQuitter.Click += new System.EventHandler(this.bQuitter_Click);
             // 
             // PanelInterieur
             // 
-            this.PanelInterieur.Controls.Add(this.tbUserConnecte2);
-            this.PanelInterieur.Controls.Add(this.label1);
-            this.PanelInterieur.Controls.Add(this.lBien);
+            this.PanelInterieur.Controls.Add(this.tbUser);
+            this.PanelInterieur.Controls.Add(this.lWelcomeSub);
+            this.PanelInterieur.Controls.Add(this.lWelcome);
             this.PanelInterieur.Location = new System.Drawing.Point(87, 35);
             this.PanelInterieur.Name = "PanelInterieur";
             this.PanelInterieur.Size = new System.Drawing.Size(879, 543);
             this.PanelInterieur.TabIndex = 11;
             // 
-            // tbUserConnecte2
+            // tbUser
             // 
-            this.tbUserConnecte2.AutoSize = true;
-            this.tbUserConnecte2.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUserConnecte2.ForeColor = System.Drawing.Color.Green;
-            this.tbUserConnecte2.Location = new System.Drawing.Point(531, 156);
-            this.tbUserConnecte2.Name = "tbUserConnecte2";
-            this.tbUserConnecte2.Size = new System.Drawing.Size(89, 29);
-            this.tbUserConnecte2.TabIndex = 15;
-            this.tbUserConnecte2.Text = "label2";
+            this.tbUser.AutoSize = true;
+            this.tbUser.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUser.ForeColor = System.Drawing.Color.Green;
+            this.tbUser.Location = new System.Drawing.Point(531, 156);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(92, 29);
+            this.tbUser.TabIndex = 15;
+            this.tbUser.Text = "{user}";
             // 
-            // label1
+            // lWelcomeSub
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Green;
-            this.label1.Location = new System.Drawing.Point(228, 304);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(666, 29);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Application de gestion administration de l\'école FSI";
+            this.lWelcomeSub.AutoSize = true;
+            this.lWelcomeSub.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lWelcomeSub.ForeColor = System.Drawing.Color.Green;
+            this.lWelcomeSub.Location = new System.Drawing.Point(228, 304);
+            this.lWelcomeSub.Name = "lWelcomeSub";
+            this.lWelcomeSub.Size = new System.Drawing.Size(666, 29);
+            this.lWelcomeSub.TabIndex = 14;
+            this.lWelcomeSub.Text = "Application de gestion administration de l\'école FSI";
             // 
-            // lBien
+            // lWelcome
             // 
-            this.lBien.AutoSize = true;
-            this.lBien.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lBien.ForeColor = System.Drawing.Color.Green;
-            this.lBien.Location = new System.Drawing.Point(385, 156);
-            this.lBien.Name = "lBien";
-            this.lBien.Size = new System.Drawing.Size(180, 29);
-            this.lBien.TabIndex = 13;
-            this.lBien.Text = "BIENVENUE ";
+            this.lWelcome.AutoSize = true;
+            this.lWelcome.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lWelcome.ForeColor = System.Drawing.Color.Green;
+            this.lWelcome.Location = new System.Drawing.Point(385, 156);
+            this.lWelcome.Name = "lWelcome";
+            this.lWelcome.Size = new System.Drawing.Size(146, 29);
+            this.lWelcome.TabIndex = 13;
+            this.lWelcome.Text = "Bienvenue";
             // 
             // Accueil
             // 
@@ -213,7 +215,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Accueil";
-            this.Text = "ACCUEIL";
+            this.Text = "Accueil";
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenu.PerformLayout();
             this.msGlobal.ResumeLayout(false);
@@ -240,13 +242,13 @@
         private System.Windows.Forms.Panel PanelInterieur;
         //    private System.Windows.Forms.Label lTexteBienvenue;
         //     private System.Windows.Forms.Label lBienvenue;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lBien;
+        private System.Windows.Forms.Label lWelcomeSub;
+        private System.Windows.Forms.Label lWelcome;
         private System.Windows.Forms.Button bQuitter;
         private System.Windows.Forms.ToolStripMenuItem gestionClasseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeDesClassesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUneClasseToolStripMenuItem;
-        private System.Windows.Forms.Label tbUserConnecte2;
+        private System.Windows.Forms.Label tbUser;
         //    private System.Windows.Forms.Label tbUserConnecte2;
     }
 }
