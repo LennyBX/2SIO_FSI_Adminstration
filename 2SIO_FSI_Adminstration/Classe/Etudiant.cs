@@ -11,26 +11,28 @@ namespace _2SIO_FSI_Adminstration.Classe
         private int idEtudiant;
         private string nomEtudiant;
         private string prenomEtudiant;
-        private int idClasse;
+        private string numeroEtudiant;
+        private string mailEtudiant;
+        private Classe classeEtudiant;
 
         public Etudiant() { }
 
-        public Etudiant(int id, string nom, string prenom, int idclasse)
+        public Etudiant(int id, string nom, string prenom, string numero, string mail, Classe classe)
         {
             this.idEtudiant = id;
             this.nomEtudiant = nom;
             this.prenomEtudiant = prenom;
-            this.idClasse = idclasse;
+            this.numeroEtudiant = numero;
+            this.mailEtudiant = mail;
+            this.classeEtudiant = classe;
         }
 
         public int IdEtudiant { get => idEtudiant; set => idEtudiant = value; }
         public string NomEtudiant { get => nomEtudiant; set => nomEtudiant = value; }
         public string PrenomEtudiant { get => prenomEtudiant; set => prenomEtudiant = value; }
-        public int IdClasse { get => idClasse; set => idClasse = value; }
+        public string NumeroEtudiant { get => numeroEtudiant; set => numeroEtudiant = value; }
+        public string MailEtudiant { get => mailEtudiant; set => mailEtudiant = value; }
+        public Classe ClasseEtudiant { get => classeEtudiant; set => classeEtudiant = value; }
 
-        public override string ToString()
-        {
-            return "Etudiant " + NomEtudiant;
-        }
     }
 }

@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classe\Classe.cs" />
+    <Compile Include="Classe\Cours.cs" />
     <Compile Include="Classe\Database.cs" />
     <Compile Include="Classe\Etudiant.cs" />
     <Compile Include="Layout\ToolStripMenuLayout.cs" />
@@ -174,6 +175,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SQL\CREATE_TABLE.sql" />
+    <Content Include="SQL\INSERT_INTO.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.0\build\System.Text.Json.targets')" />

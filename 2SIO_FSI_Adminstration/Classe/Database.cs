@@ -40,7 +40,28 @@ namespace _2SIO_FSI_Adminstration.Classe
             if (npgsqlDataReader.Read())
             {
                 classe.IdClasse = npgsqlDataReader.GetInt32(0);
-                classe.LibelleClasse = npgsqlDataReader.GetString(1);
+                classe.AcronymeClasse = npgsqlDataReader.GetString(1);
+                classe.LibelleClasse = npgsqlDataReader.GetString(2);
+            }
+            npgsqlConnection.Close();
+            return classe;
+        }
+
+        public Classe getClasseById(int id)
+        {
+            Classe classe = new Classe();
+
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM classe where idclasse = :id;", npgsqlConnection);
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("id", NpgsqlDbType.Integer)).Value = id;
+            npgsqlCommand.Prepare();
+            NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();
+
+            if (npgsqlDataReader.Read())
+            {
+                classe.IdClasse = npgsqlDataReader.GetInt32(0);
+                classe.AcronymeClasse = npgsqlDataReader.GetString(1);
+                classe.LibelleClasse = npgsqlDataReader.GetString(2);
             }
             npgsqlConnection.Close();
             return classe;
@@ -56,8 +77,9 @@ namespace _2SIO_FSI_Adminstration.Classe
             while (npgsqlDataReader.Read())
             {
                 int idClasse = npgsqlDataReader.GetInt32(0);
-                String libelleClasse = npgsqlDataReader.GetString(1);
-                classes.Add(new Classe(idClasse, libelleClasse));
+                String acronymeClasse = npgsqlDataReader.GetString(1);
+                String libelleClasse = npgsqlDataReader.GetString(2);
+                classes.Add(new Classe(idClasse, acronymeClasse, libelleClasse));
             }
             npgsqlConnection.Close();
             return classes;
@@ -83,18 +105,29 @@ namespace _2SIO_FSI_Adminstration.Classe
 
         public List<Etudiant> getAllEtudiants()
         {
+            List<Classe> classes = getAllClasses();
             npgsqlConnection.Open();
             NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM etudiant;", npgsqlConnection);
             NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();
-
+            
             List<Etudiant> etudiants = new List<Etudiant>();
             while (npgsqlDataReader.Read())
             {
                 int idEtudiant = npgsqlDataReader.GetInt32(0);
                 String nomEtudiant = npgsqlDataReader.GetString(1);
                 String prenomEtudiant = npgsqlDataReader.GetString(2);
-                int idClasse = npgsqlDataReader.GetInt32(3);
-                etudiants.Add(new Etudiant(idEtudiant, nomEtudiant, prenomEtudiant, idClasse));
+                String numeroEtudiant = npgsqlDataReader.GetString(3);
+                String mailEtudiant = npgsqlDataReader.GetString(4);
+                Classe classeEtudiant = new Classe();
+                foreach (Classe classe in classes)
+                {
+                    if (classe.IdClasse == npgsqlDataReader.GetInt32(5))
+                    {
+                        classeEtudiant = classe;
+                    }
+                }
+                etudiants.Add(new Etudiant(idEtudiant, nomEtudiant, prenomEtudiant, numeroEtudiant, mailEtudiant, classeEtudiant));
+                
             }
             npgsqlConnection.Close();
             return etudiants;
