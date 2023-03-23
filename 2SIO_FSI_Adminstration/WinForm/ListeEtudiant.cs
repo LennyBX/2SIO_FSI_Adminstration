@@ -17,7 +17,7 @@ namespace _2SIO_FSI_Adminstration.WinForm
             utilisateur = utilisateur1;
             foreach (Etudiant etu in database.getAllEtudiants())
             {
-                dgvEtudiants.Rows.Add(etu.NomEtudiant, etu.PrenomEtudiant);
+                dgvEtudiants.Rows.Add(etu.NomEtudiant, etu.PrenomEtudiant, etu.IdClasse);
             }
         }
 

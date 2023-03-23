@@ -98,6 +98,7 @@
             // 
             // msGlobal
             // 
+            this.msGlobal.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.msGlobal.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.msGlobal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accueilToolStripMenuItem2,
@@ -105,14 +106,14 @@
             this.gestionClasseToolStripMenuItem});
             this.msGlobal.Location = new System.Drawing.Point(0, 0);
             this.msGlobal.Name = "msGlobal";
-            this.msGlobal.Size = new System.Drawing.Size(806, 28);
+            this.msGlobal.Size = new System.Drawing.Size(806, 36);
             this.msGlobal.TabIndex = 0;
             this.msGlobal.Text = "Menu";
             // 
             // accueilToolStripMenuItem2
             // 
             this.accueilToolStripMenuItem2.Name = "accueilToolStripMenuItem2";
-            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(71, 24);
+            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 30);
             this.accueilToolStripMenuItem2.Text = "Accueil";
             this.accueilToolStripMenuItem2.Click += new System.EventHandler(this.accueilToolStripMenuItem2_Click);
             // 
@@ -122,20 +123,20 @@
             this.listeDesEtudiantsToolStripMenuItem,
             this.ajouterUnEtudiantToolStripMenuItem});
             this.gestionEtudiantToolStripMenuItem1.Name = "gestionEtudiantToolStripMenuItem1";
-            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(132, 24);
+            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(158, 30);
             this.gestionEtudiantToolStripMenuItem1.Text = "Gestion Etudiant";
             // 
             // listeDesEtudiantsToolStripMenuItem
             // 
             this.listeDesEtudiantsToolStripMenuItem.Name = "listeDesEtudiantsToolStripMenuItem";
-            this.listeDesEtudiantsToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.listeDesEtudiantsToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
             this.listeDesEtudiantsToolStripMenuItem.Text = "Liste des étudiants";
             this.listeDesEtudiantsToolStripMenuItem.Click += new System.EventHandler(this.listeDesEtudiantsToolStripMenuItem_Click);
             // 
             // ajouterUnEtudiantToolStripMenuItem
             // 
             this.ajouterUnEtudiantToolStripMenuItem.Name = "ajouterUnEtudiantToolStripMenuItem";
-            this.ajouterUnEtudiantToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
+            this.ajouterUnEtudiantToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
             this.ajouterUnEtudiantToolStripMenuItem.Text = "Ajouter un étudiant";
             this.ajouterUnEtudiantToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnEtudiantToolStripMenuItem_Click);
             // 
@@ -145,19 +146,19 @@
             this.listeDesClassesToolStripMenuItem,
             this.ajouterUneClasseToolStripMenuItem});
             this.gestionClasseToolStripMenuItem.Name = "gestionClasseToolStripMenuItem";
-            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
+            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(139, 30);
             this.gestionClasseToolStripMenuItem.Text = "Gestion classe";
             // 
             // listeDesClassesToolStripMenuItem
             // 
             this.listeDesClassesToolStripMenuItem.Name = "listeDesClassesToolStripMenuItem";
-            this.listeDesClassesToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.listeDesClassesToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.listeDesClassesToolStripMenuItem.Text = "Liste des classes";
             // 
             // ajouterUneClasseToolStripMenuItem
             // 
             this.ajouterUneClasseToolStripMenuItem.Name = "ajouterUneClasseToolStripMenuItem";
-            this.ajouterUneClasseToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
+            this.ajouterUneClasseToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.ajouterUneClasseToolStripMenuItem.Text = "Ajouter une classe";
             // 
             // PanelInterieur
@@ -173,7 +174,7 @@
             // 
             this.dgvEtudiants.AllowUserToAddRows = false;
             this.dgvEtudiants.AllowUserToDeleteRows = false;
-            this.dgvEtudiants.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvEtudiants.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEtudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEtudiants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomEtudiant,
@@ -184,7 +185,7 @@
             this.dgvEtudiants.Name = "dgvEtudiants";
             this.dgvEtudiants.ReadOnly = true;
             this.dgvEtudiants.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvEtudiants.Size = new System.Drawing.Size(500, 281);
+            this.dgvEtudiants.Size = new System.Drawing.Size(803, 398);
             this.dgvEtudiants.TabIndex = 1;
             this.dgvEtudiants.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEtudiants_CellContentClick);
             // 
@@ -194,7 +195,6 @@
             this.nomEtudiant.MinimumWidth = 8;
             this.nomEtudiant.Name = "nomEtudiant";
             this.nomEtudiant.ReadOnly = true;
-            this.nomEtudiant.Width = 96;
             // 
             // prenomEtudiant
             // 
@@ -202,7 +202,6 @@
             this.prenomEtudiant.MinimumWidth = 8;
             this.prenomEtudiant.Name = "prenomEtudiant";
             this.prenomEtudiant.ReadOnly = true;
-            this.prenomEtudiant.Width = 132;
             // 
             // Classe
             // 
@@ -210,7 +209,6 @@
             this.Classe.MinimumWidth = 6;
             this.Classe.Name = "Classe";
             this.Classe.ReadOnly = true;
-            this.Classe.Width = 113;
             // 
             // dgvListeEtudiant
             // 
@@ -239,7 +237,7 @@
             // 
             // ListeEtudiant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1064, 444);
@@ -249,7 +247,7 @@
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.PanelLogo);
             this.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Blue;
+            this.ForeColor = System.Drawing.Color.Green;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);

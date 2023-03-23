@@ -62,6 +62,7 @@
             // 
             // msGlobal
             // 
+            this.msGlobal.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.msGlobal.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.msGlobal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accueilToolStripMenuItem2,
@@ -69,14 +70,14 @@
             this.gestionClasseToolStripMenuItem});
             this.msGlobal.Location = new System.Drawing.Point(0, 0);
             this.msGlobal.Name = "msGlobal";
-            this.msGlobal.Size = new System.Drawing.Size(806, 28);
+            this.msGlobal.Size = new System.Drawing.Size(806, 33);
             this.msGlobal.TabIndex = 0;
             this.msGlobal.Text = "Menu";
             // 
             // accueilToolStripMenuItem2
             // 
             this.accueilToolStripMenuItem2.Name = "accueilToolStripMenuItem2";
-            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(71, 24);
+            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 29);
             this.accueilToolStripMenuItem2.Text = "Accueil";
             // 
             // gestionEtudiantToolStripMenuItem1
@@ -85,20 +86,20 @@
             this.listeDesEtudiantsToolStripMenuItem,
             this.ajouterUnEtudiantToolStripMenuItem});
             this.gestionEtudiantToolStripMenuItem1.Name = "gestionEtudiantToolStripMenuItem1";
-            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(165, 24);
+            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(199, 29);
             this.gestionEtudiantToolStripMenuItem1.Text = "Gestion des étudiants";
             // 
             // listeDesEtudiantsToolStripMenuItem
             // 
             this.listeDesEtudiantsToolStripMenuItem.Name = "listeDesEtudiantsToolStripMenuItem";
-            this.listeDesEtudiantsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.listeDesEtudiantsToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
             this.listeDesEtudiantsToolStripMenuItem.Text = "Liste des étudiants";
             this.listeDesEtudiantsToolStripMenuItem.Click += new System.EventHandler(this.listeDesEtudiantsToolStripMenuItem_Click);
             // 
             // ajouterUnEtudiantToolStripMenuItem
             // 
             this.ajouterUnEtudiantToolStripMenuItem.Name = "ajouterUnEtudiantToolStripMenuItem";
-            this.ajouterUnEtudiantToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ajouterUnEtudiantToolStripMenuItem.Size = new System.Drawing.Size(267, 34);
             this.ajouterUnEtudiantToolStripMenuItem.Text = "Ajouter un étudiant";
             this.ajouterUnEtudiantToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnEtudiantToolStripMenuItem_Click);
             // 
@@ -108,20 +109,20 @@
             this.listeDesClassesToolStripMenuItem,
             this.ajouterUneClasseToolStripMenuItem});
             this.gestionClasseToolStripMenuItem.Name = "gestionClasseToolStripMenuItem";
-            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(149, 24);
+            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(180, 29);
             this.gestionClasseToolStripMenuItem.Text = "Gestion des classes";
             // 
             // listeDesClassesToolStripMenuItem
             // 
             this.listeDesClassesToolStripMenuItem.Name = "listeDesClassesToolStripMenuItem";
-            this.listeDesClassesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.listeDesClassesToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.listeDesClassesToolStripMenuItem.Text = "Liste des classes";
             this.listeDesClassesToolStripMenuItem.Click += new System.EventHandler(this.listeDesClassesToolStripMenuItem_Click);
             // 
             // ajouterUneClasseToolStripMenuItem
             // 
             this.ajouterUneClasseToolStripMenuItem.Name = "ajouterUneClasseToolStripMenuItem";
-            this.ajouterUneClasseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ajouterUneClasseToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.ajouterUneClasseToolStripMenuItem.Text = "Ajouter une classe";
             this.ajouterUneClasseToolStripMenuItem.Click += new System.EventHandler(this.ajouterUneClasseToolStripMenuItem_Click);
             // 
@@ -173,7 +174,7 @@
             this.tbUser.ForeColor = System.Drawing.Color.Green;
             this.tbUser.Location = new System.Drawing.Point(531, 156);
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(92, 29);
+            this.tbUser.Size = new System.Drawing.Size(111, 35);
             this.tbUser.TabIndex = 15;
             this.tbUser.Text = "{user}";
             // 
@@ -184,7 +185,7 @@
             this.lWelcomeSub.ForeColor = System.Drawing.Color.Green;
             this.lWelcomeSub.Location = new System.Drawing.Point(228, 304);
             this.lWelcomeSub.Name = "lWelcomeSub";
-            this.lWelcomeSub.Size = new System.Drawing.Size(666, 29);
+            this.lWelcomeSub.Size = new System.Drawing.Size(806, 35);
             this.lWelcomeSub.TabIndex = 14;
             this.lWelcomeSub.Text = "Application de gestion administration de l\'école FSI";
             // 
@@ -195,13 +196,13 @@
             this.lWelcome.ForeColor = System.Drawing.Color.Green;
             this.lWelcome.Location = new System.Drawing.Point(385, 156);
             this.lWelcome.Name = "lWelcome";
-            this.lWelcome.Size = new System.Drawing.Size(146, 29);
+            this.lWelcome.Size = new System.Drawing.Size(175, 35);
             this.lWelcome.TabIndex = 13;
             this.lWelcome.Text = "Bienvenue";
             // 
             // Accueil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 624);
