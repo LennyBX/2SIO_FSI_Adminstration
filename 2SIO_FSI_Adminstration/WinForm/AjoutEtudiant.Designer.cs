@@ -45,30 +45,33 @@
             // lNom
             // 
             this.lNom.AutoSize = true;
+            this.lNom.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNom.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lNom.Location = new System.Drawing.Point(29, 60);
+            this.lNom.Location = new System.Drawing.Point(30, 63);
             this.lNom.Name = "lNom";
-            this.lNom.Size = new System.Drawing.Size(70, 31);
+            this.lNom.Size = new System.Drawing.Size(87, 35);
             this.lNom.TabIndex = 0;
             this.lNom.Text = "Nom";
             // 
             // lPrenom
             // 
             this.lPrenom.AutoSize = true;
+            this.lPrenom.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPrenom.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lPrenom.Location = new System.Drawing.Point(29, 136);
+            this.lPrenom.Location = new System.Drawing.Point(18, 139);
             this.lPrenom.Name = "lPrenom";
-            this.lPrenom.Size = new System.Drawing.Size(105, 31);
+            this.lPrenom.Size = new System.Drawing.Size(135, 35);
             this.lPrenom.TabIndex = 1;
             this.lPrenom.Text = "Prénom";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
             this.label1.Location = new System.Drawing.Point(29, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 31);
+            this.label1.Size = new System.Drawing.Size(109, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Classe";
             // 
@@ -76,19 +79,20 @@
             // 
             this.tbLastName.Location = new System.Drawing.Point(159, 57);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(190, 46);
+            this.tbLastName.Size = new System.Drawing.Size(190, 53);
             this.tbLastName.TabIndex = 3;
             // 
             // tbFirstName
             // 
             this.tbFirstName.Location = new System.Drawing.Point(159, 133);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(190, 46);
+            this.tbFirstName.Size = new System.Drawing.Size(190, 53);
             this.tbFirstName.TabIndex = 4;
             // 
             // bAddUser
             // 
             this.bAddUser.BackColor = System.Drawing.Color.Honeydew;
+            this.bAddUser.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAddUser.ForeColor = System.Drawing.Color.DarkGreen;
             this.bAddUser.Location = new System.Drawing.Point(35, 327);
             this.bAddUser.Name = "bAddUser";
@@ -101,6 +105,7 @@
             // bBack
             // 
             this.bBack.BackColor = System.Drawing.Color.Honeydew;
+            this.bBack.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBack.ForeColor = System.Drawing.Color.DarkGreen;
             this.bBack.Location = new System.Drawing.Point(252, 417);
             this.bBack.Name = "bBack";
@@ -123,6 +128,7 @@
             // bClearText
             // 
             this.bClearText.BackColor = System.Drawing.Color.Honeydew;
+            this.bClearText.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bClearText.ForeColor = System.Drawing.Color.DarkGreen;
             this.bClearText.Location = new System.Drawing.Point(252, 327);
             this.bClearText.Name = "bClearText";
@@ -138,12 +144,12 @@
             this.cbClasse.FormattingEnabled = true;
             this.cbClasse.Location = new System.Drawing.Point(159, 208);
             this.cbClasse.Name = "cbClasse";
-            this.cbClasse.Size = new System.Drawing.Size(190, 39);
+            this.cbClasse.Size = new System.Drawing.Size(190, 47);
             this.cbClasse.TabIndex = 10;
             // 
             // AjoutEtudiant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(451, 492);

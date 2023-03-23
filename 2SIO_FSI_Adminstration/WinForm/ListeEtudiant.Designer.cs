@@ -41,20 +41,16 @@
             this.gestionClasseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listeDesClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUneClasseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PanelInterieur = new System.Windows.Forms.Panel();
             this.dgvEtudiants = new System.Windows.Forms.DataGridView();
             this.nomEtudiant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prenomEtudiant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Classe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvListeEtudiant = new System.Windows.Forms.DataGridView();
             this.bFermer = new System.Windows.Forms.Button();
             this.PanelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.PanelMenu.SuspendLayout();
             this.msGlobal.SuspendLayout();
-            this.PanelInterieur.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEtudiants)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListeEtudiant)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelLogo
@@ -80,9 +76,9 @@
             this.bQuitter.BackColor = System.Drawing.Color.Green;
             this.bQuitter.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bQuitter.ForeColor = System.Drawing.Color.Transparent;
-            this.bQuitter.Location = new System.Drawing.Point(903, 12);
+            this.bQuitter.Location = new System.Drawing.Point(1220, 39);
             this.bQuitter.Name = "bQuitter";
-            this.bQuitter.Size = new System.Drawing.Size(149, 34);
+            this.bQuitter.Size = new System.Drawing.Size(153, 50);
             this.bQuitter.TabIndex = 7;
             this.bQuitter.Text = "QUITTER";
             this.bQuitter.UseVisualStyleBackColor = false;
@@ -106,14 +102,14 @@
             this.gestionClasseToolStripMenuItem});
             this.msGlobal.Location = new System.Drawing.Point(0, 0);
             this.msGlobal.Name = "msGlobal";
-            this.msGlobal.Size = new System.Drawing.Size(806, 36);
+            this.msGlobal.Size = new System.Drawing.Size(806, 33);
             this.msGlobal.TabIndex = 0;
             this.msGlobal.Text = "Menu";
             // 
             // accueilToolStripMenuItem2
             // 
             this.accueilToolStripMenuItem2.Name = "accueilToolStripMenuItem2";
-            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 30);
+            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 29);
             this.accueilToolStripMenuItem2.Text = "Accueil";
             this.accueilToolStripMenuItem2.Click += new System.EventHandler(this.accueilToolStripMenuItem2_Click);
             // 
@@ -123,7 +119,7 @@
             this.listeDesEtudiantsToolStripMenuItem,
             this.ajouterUnEtudiantToolStripMenuItem});
             this.gestionEtudiantToolStripMenuItem1.Name = "gestionEtudiantToolStripMenuItem1";
-            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(158, 30);
+            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(158, 29);
             this.gestionEtudiantToolStripMenuItem1.Text = "Gestion Etudiant";
             // 
             // listeDesEtudiantsToolStripMenuItem
@@ -146,7 +142,7 @@
             this.listeDesClassesToolStripMenuItem,
             this.ajouterUneClasseToolStripMenuItem});
             this.gestionClasseToolStripMenuItem.Name = "gestionClasseToolStripMenuItem";
-            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(139, 30);
+            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
             this.gestionClasseToolStripMenuItem.Text = "Gestion classe";
             // 
             // listeDesClassesToolStripMenuItem
@@ -161,31 +157,23 @@
             this.ajouterUneClasseToolStripMenuItem.Size = new System.Drawing.Size(257, 34);
             this.ajouterUneClasseToolStripMenuItem.Text = "Ajouter une classe";
             // 
-            // PanelInterieur
-            // 
-            this.PanelInterieur.Controls.Add(this.dgvEtudiants);
-            this.PanelInterieur.Controls.Add(this.dgvListeEtudiant);
-            this.PanelInterieur.Location = new System.Drawing.Point(87, 29);
-            this.PanelInterieur.Name = "PanelInterieur";
-            this.PanelInterieur.Size = new System.Drawing.Size(806, 404);
-            this.PanelInterieur.TabIndex = 12;
-            // 
             // dgvEtudiants
             // 
             this.dgvEtudiants.AllowUserToAddRows = false;
             this.dgvEtudiants.AllowUserToDeleteRows = false;
             this.dgvEtudiants.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEtudiants.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEtudiants.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEtudiants.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomEtudiant,
             this.prenomEtudiant,
             this.Classe});
-            this.dgvEtudiants.Location = new System.Drawing.Point(0, 3);
+            this.dgvEtudiants.Location = new System.Drawing.Point(90, 39);
             this.dgvEtudiants.MultiSelect = false;
             this.dgvEtudiants.Name = "dgvEtudiants";
             this.dgvEtudiants.ReadOnly = true;
             this.dgvEtudiants.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvEtudiants.Size = new System.Drawing.Size(803, 398);
+            this.dgvEtudiants.Size = new System.Drawing.Size(1086, 503);
             this.dgvEtudiants.TabIndex = 1;
             // 
             // nomEtudiant
@@ -209,26 +197,13 @@
             this.Classe.Name = "Classe";
             this.Classe.ReadOnly = true;
             // 
-            // dgvListeEtudiant
-            // 
-            this.dgvListeEtudiant.AllowUserToOrderColumns = true;
-            this.dgvListeEtudiant.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListeEtudiant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListeEtudiant.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvListeEtudiant.GridColor = System.Drawing.Color.SkyBlue;
-            this.dgvListeEtudiant.Location = new System.Drawing.Point(0, 0);
-            this.dgvListeEtudiant.Name = "dgvListeEtudiant";
-            this.dgvListeEtudiant.RowHeadersWidth = 62;
-            this.dgvListeEtudiant.Size = new System.Drawing.Size(806, 404);
-            this.dgvListeEtudiant.TabIndex = 0;
-            // 
             // bFermer
             // 
             this.bFermer.BackColor = System.Drawing.Color.Green;
             this.bFermer.ForeColor = System.Drawing.Color.Transparent;
-            this.bFermer.Location = new System.Drawing.Point(899, 52);
+            this.bFermer.Location = new System.Drawing.Point(1220, 105);
             this.bFermer.Name = "bFermer";
-            this.bFermer.Size = new System.Drawing.Size(153, 34);
+            this.bFermer.Size = new System.Drawing.Size(153, 47);
             this.bFermer.TabIndex = 13;
             this.bFermer.Text = "FERMER";
             this.bFermer.UseVisualStyleBackColor = false;
@@ -239,10 +214,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1064, 444);
+            this.ClientSize = new System.Drawing.Size(1385, 577);
+            this.Controls.Add(this.dgvEtudiants);
             this.Controls.Add(this.bQuitter);
             this.Controls.Add(this.bFermer);
-            this.Controls.Add(this.PanelInterieur);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.PanelLogo);
             this.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,9 +233,7 @@
             this.PanelMenu.PerformLayout();
             this.msGlobal.ResumeLayout(false);
             this.msGlobal.PerformLayout();
-            this.PanelInterieur.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEtudiants)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListeEtudiant)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,8 +249,6 @@
         private System.Windows.Forms.ToolStripMenuItem gestionEtudiantToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listeDesEtudiantsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUnEtudiantToolStripMenuItem;
-        private System.Windows.Forms.Panel PanelInterieur;
-        private System.Windows.Forms.DataGridView dgvListeEtudiant;
         //   private P2022_Appli_AdministrationDataSetTableAdapters.etudiantTableAdapter etudiantTableAdapter;
         private System.Windows.Forms.Button bFermer;
     //    private System.Windows.Forms.DataGridViewTextBoxColumn nometudiantDataGridViewTextBoxColumn;

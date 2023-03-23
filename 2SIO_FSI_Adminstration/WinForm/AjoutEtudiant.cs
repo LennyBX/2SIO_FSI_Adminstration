@@ -30,7 +30,7 @@ namespace _2SIO_FSI_Adminstration.WinForm
         {
             foreach (Classe.Classe cl in database.getAllClasses())
             {
-                cbClasse.Items.Add(cl.LibelleClasse);
+                cbClasse.Items.Add(cl.AcronymeClasse);
 
             }
         }

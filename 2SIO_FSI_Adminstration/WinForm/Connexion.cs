@@ -12,7 +12,7 @@ namespace _2SIO_FSI_Adminstration.WinForm
 
         public Connexion()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void bConnexion_Click(object sender, EventArgs e)
