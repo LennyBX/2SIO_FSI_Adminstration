@@ -15,9 +15,10 @@ namespace _2SIO_FSI_Adminstration.WinForm
         {
             InitializeComponent();
             utilisateur = utilisateur1;
-            foreach (Etudiant etu in database.getAllEtudiants())
+            List<Etudiant> etudiants = database.getAllEtudiants();
+            foreach (Etudiant etu in etudiants)
             {
-                dgvEtudiants.Rows.Add(etu.NomEtudiant, etu.PrenomEtudiant, etu.IdClasse);
+                dgvEtudiants.Rows.Add(etu.NomEtudiant, etu.PrenomEtudiant, etu.ClasseEtudiant.LibelleClasse);
             }
         }
 
@@ -35,25 +36,23 @@ namespace _2SIO_FSI_Adminstration.WinForm
 
         private void listeDesEtudiantsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Close();
             Form formListeEtudiant = new ListeEtudiant(utilisateur);
             formListeEtudiant.Show();
         }
 
         private void ajouterUnEtudiantToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Close();
             Form formAjouterEtudiant = new AjoutEtudiant(utilisateur);
             formAjouterEtudiant.Show();
         }
 
         private void accueilToolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            this.Close();
             Form formAccueil = new Accueil(utilisateur);
             formAccueil.Show();
-        }
-
-        private void dgvEtudiants_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

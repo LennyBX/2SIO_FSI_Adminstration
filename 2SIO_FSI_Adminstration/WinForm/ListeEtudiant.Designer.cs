@@ -187,7 +187,6 @@
             this.dgvEtudiants.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvEtudiants.Size = new System.Drawing.Size(803, 398);
             this.dgvEtudiants.TabIndex = 1;
-            this.dgvEtudiants.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEtudiants_CellContentClick);
             // 
             // nomEtudiant
             // 

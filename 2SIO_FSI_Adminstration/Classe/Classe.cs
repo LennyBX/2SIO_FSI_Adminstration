@@ -9,18 +9,21 @@ namespace _2SIO_FSI_Adminstration.Classe
     public class Classe
     {
         private int idClasse;
+        private string acronymeClasse;
         private string libelleClasse; 
 
         public Classe() { }
 
-        public Classe(int idClasse, string libelleClasse)
+        public Classe(int id, string acronyme, string libelle)
         {
-            this.idClasse = idClasse;
-            this.libelleClasse = libelleClasse;
+            this.idClasse = id;
+            this.acronymeClasse = acronyme;
+            this.libelleClasse = libelle;
         }
 
         public int IdClasse { get => idClasse; set => idClasse = value; }
-        public String LibelleClasse { get => libelleClasse; set => libelleClasse = value; }
+        public string AcronymeClasse { get => acronymeClasse; set => acronymeClasse = value; }
+        public string LibelleClasse { get => libelleClasse; set => libelleClasse = value; }
 
     }
 }
