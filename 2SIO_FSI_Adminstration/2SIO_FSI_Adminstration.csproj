@@ -111,6 +111,12 @@
     <Compile Include="WinForm\AjoutClasse.Designer.cs">
       <DependentUpon>AjoutClasse.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForm\AjoutCour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\AjoutCour.Designer.cs">
+      <DependentUpon>AjoutCour.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForm\AjoutEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     <Compile Include="WinForm\Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForm\ListeCour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\ListeCour.Designer.cs">
+      <DependentUpon>ListeCour.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForm\ListeClasse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </Compile>
     <Compile Include="WinForm\ListeEtudiant.Designer.cs">
       <DependentUpon>ListeEtudiant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\SupprCour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\SupprCour.Designer.cs">
+      <DependentUpon>SupprCour.cs</DependentUpon>
     </Compile>
     <Compile Include="WinForm\SupprEtudiant.cs">
       <SubType>Form</SubType>
@@ -156,6 +174,9 @@
     <EmbeddedResource Include="WinForm\AjoutClasse.resx">
       <DependentUpon>AjoutClasse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\AjoutCour.resx">
+      <DependentUpon>AjoutCour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WinForm\AjoutEtudiant.resx">
       <DependentUpon>AjoutEtudiant.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,8 +186,14 @@
     <EmbeddedResource Include="WinForm\ListeClasse.resx">
       <DependentUpon>ListeClasse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\ListeCour.resx">
+      <DependentUpon>ListeCour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WinForm\ListeEtudiant.resx">
       <DependentUpon>ListeEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\SupprCour.resx">
+      <DependentUpon>SupprCour.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForm\SupprEtudiant.resx">
       <DependentUpon>SupprEtudiant.cs</DependentUpon>
