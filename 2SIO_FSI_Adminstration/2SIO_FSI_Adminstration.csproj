@@ -135,6 +135,12 @@
     <Compile Include="WinForm\ListeEtudiant.Designer.cs">
       <DependentUpon>ListeEtudiant.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForm\SupprEtudiant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\SupprEtudiant.Designer.cs">
+      <DependentUpon>SupprEtudiant.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="WinForm\Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WinForm\ListeEtudiant.resx">
       <DependentUpon>ListeEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\SupprEtudiant.resx">
+      <DependentUpon>SupprEtudiant.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

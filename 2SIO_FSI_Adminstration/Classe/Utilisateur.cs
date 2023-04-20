@@ -12,8 +12,17 @@ namespace _2SIO_FSI_Adminstration.Classe
         private string loginUtilisateur;
         private string mdpUtilisateur;
 
+        /// <summary>
+        /// Créer une instance d'objet Utilisateur sans attribut
+        /// </summary>
         public Utilisateur() { }
 
+        /// <summary>
+        /// Créer une instance d'objet Utilisateur avec tous ses attributs
+        /// </summary>
+        /// <param name="idUtilisateur"></param>
+        /// <param name="loginUtilisateur"></param>
+        /// <param name="mdpUtilisateur"></param>
         public Utilisateur(int idUtilisateur, string loginUtilisateur, string mdpUtilisateur)
         {
             this.idUtilisateur = idUtilisateur;

@@ -15,8 +15,20 @@ namespace _2SIO_FSI_Adminstration.Classe
         private string mailEtudiant;
         private Classe classeEtudiant;
 
+        /// <summary>
+        /// Créer une instance d'objet Etudiant sans attribut
+        /// </summary>
         public Etudiant() { }
 
+        /// <summary>
+        /// Créer une instance d'objet Etudiant avec tous ses attributs
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <param name="numero"></param>
+        /// <param name="mail"></param>
+        /// <param name="classe"></param>
         public Etudiant(int id, string nom, string prenom, string numero, string mail, Classe classe)
         {
             this.idEtudiant = id;
@@ -33,6 +45,11 @@ namespace _2SIO_FSI_Adminstration.Classe
         public string NumeroEtudiant { get => numeroEtudiant; set => numeroEtudiant = value; }
         public string MailEtudiant { get => mailEtudiant; set => mailEtudiant = value; }
         public Classe ClasseEtudiant { get => classeEtudiant; set => classeEtudiant = value; }
+
+        public string getFullName()
+        {
+            return this.prenomEtudiant + " " + this.nomEtudiant;
+        }
 
     }
 }

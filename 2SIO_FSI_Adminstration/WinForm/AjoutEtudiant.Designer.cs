@@ -39,6 +39,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bClearText = new System.Windows.Forms.Button();
             this.cbClasse = new System.Windows.Forms.ComboBox();
+            this.lNumero = new System.Windows.Forms.Label();
+            this.tbNumero = new System.Windows.Forms.TextBox();
+            this.lMail = new System.Windows.Forms.Label();
+            this.tbMail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +53,7 @@
             this.lNom.ForeColor = System.Drawing.Color.DarkGreen;
             this.lNom.Location = new System.Drawing.Point(30, 63);
             this.lNom.Name = "lNom";
-            this.lNom.Size = new System.Drawing.Size(87, 35);
+            this.lNom.Size = new System.Drawing.Size(73, 29);
             this.lNom.TabIndex = 0;
             this.lNom.Text = "Nom";
             // 
@@ -60,7 +64,7 @@
             this.lPrenom.ForeColor = System.Drawing.Color.DarkGreen;
             this.lPrenom.Location = new System.Drawing.Point(18, 139);
             this.lPrenom.Name = "lPrenom";
-            this.lPrenom.Size = new System.Drawing.Size(135, 35);
+            this.lPrenom.Size = new System.Drawing.Size(112, 29);
             this.lPrenom.TabIndex = 1;
             this.lPrenom.Text = "Prénom";
             // 
@@ -71,7 +75,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
             this.label1.Location = new System.Drawing.Point(29, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 35);
+            this.label1.Size = new System.Drawing.Size(91, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Classe";
             // 
@@ -79,14 +83,14 @@
             // 
             this.tbLastName.Location = new System.Drawing.Point(159, 57);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(190, 53);
+            this.tbLastName.Size = new System.Drawing.Size(190, 46);
             this.tbLastName.TabIndex = 3;
             // 
             // tbFirstName
             // 
             this.tbFirstName.Location = new System.Drawing.Point(159, 133);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(190, 53);
+            this.tbFirstName.Size = new System.Drawing.Size(190, 46);
             this.tbFirstName.TabIndex = 4;
             // 
             // bAddUser
@@ -107,7 +111,7 @@
             this.bBack.BackColor = System.Drawing.Color.Honeydew;
             this.bBack.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bBack.ForeColor = System.Drawing.Color.DarkGreen;
-            this.bBack.Location = new System.Drawing.Point(252, 417);
+            this.bBack.Location = new System.Drawing.Point(532, 328);
             this.bBack.Name = "bBack";
             this.bBack.Size = new System.Drawing.Size(172, 54);
             this.bBack.TabIndex = 7;
@@ -130,7 +134,7 @@
             this.bClearText.BackColor = System.Drawing.Color.Honeydew;
             this.bClearText.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bClearText.ForeColor = System.Drawing.Color.DarkGreen;
-            this.bClearText.Location = new System.Drawing.Point(252, 327);
+            this.bClearText.Location = new System.Drawing.Point(285, 327);
             this.bClearText.Name = "bClearText";
             this.bClearText.Size = new System.Drawing.Size(172, 55);
             this.bClearText.TabIndex = 9;
@@ -144,15 +148,55 @@
             this.cbClasse.FormattingEnabled = true;
             this.cbClasse.Location = new System.Drawing.Point(159, 208);
             this.cbClasse.Name = "cbClasse";
-            this.cbClasse.Size = new System.Drawing.Size(190, 47);
+            this.cbClasse.Size = new System.Drawing.Size(190, 39);
             this.cbClasse.TabIndex = 10;
+            // 
+            // lNumero
+            // 
+            this.lNumero.AutoSize = true;
+            this.lNumero.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNumero.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lNumero.Location = new System.Drawing.Point(390, 63);
+            this.lNumero.Name = "lNumero";
+            this.lNumero.Size = new System.Drawing.Size(116, 29);
+            this.lNumero.TabIndex = 11;
+            this.lNumero.Text = "Numéro";
+            // 
+            // tbNumero
+            // 
+            this.tbNumero.Location = new System.Drawing.Point(532, 57);
+            this.tbNumero.Name = "tbNumero";
+            this.tbNumero.Size = new System.Drawing.Size(190, 46);
+            this.tbNumero.TabIndex = 12;
+            // 
+            // lMail
+            // 
+            this.lMail.AutoSize = true;
+            this.lMail.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lMail.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lMail.Location = new System.Drawing.Point(390, 139);
+            this.lMail.Name = "lMail";
+            this.lMail.Size = new System.Drawing.Size(67, 29);
+            this.lMail.TabIndex = 13;
+            this.lMail.Text = "Mail";
+            // 
+            // tbMail
+            // 
+            this.tbMail.Location = new System.Drawing.Point(532, 133);
+            this.tbMail.Name = "tbMail";
+            this.tbMail.Size = new System.Drawing.Size(190, 46);
+            this.tbMail.TabIndex = 14;
             // 
             // AjoutEtudiant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 39F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(451, 492);
+            this.ClientSize = new System.Drawing.Size(754, 411);
+            this.Controls.Add(this.tbMail);
+            this.Controls.Add(this.lMail);
+            this.Controls.Add(this.tbNumero);
+            this.Controls.Add(this.lNumero);
             this.Controls.Add(this.cbClasse);
             this.Controls.Add(this.bClearText);
             this.Controls.Add(this.pictureBox1);
@@ -169,7 +213,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AjoutEtudiant";
-            this.Text = "Ajouter un étudiant";
+            this.Text = "FSI Notes - Ajouter un étudiant";
             this.Load += new System.EventHandler(this.AjoutEtudiant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -189,6 +233,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bClearText;
         private System.Windows.Forms.ComboBox cbClasse;
-    //    private P2022_Appli_AdministrationDataSet1TableAdapters.classeTableAdapter classeTableAdapter;
+        private System.Windows.Forms.Label lNumero;
+        private System.Windows.Forms.TextBox tbNumero;
+        private System.Windows.Forms.Label lMail;
+        private System.Windows.Forms.TextBox tbMail;
+        //    private P2022_Appli_AdministrationDataSet1TableAdapters.classeTableAdapter classeTableAdapter;
     }
 }
