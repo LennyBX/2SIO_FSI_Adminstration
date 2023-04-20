@@ -47,7 +47,6 @@
             this.lWelcome = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             this.msGlobal.SuspendLayout();
-            this.PanelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.PanelInterieur.SuspendLayout();
             this.SuspendLayout();
@@ -128,7 +127,6 @@
             // 
             // PanelLogo
             // 
-            this.PanelLogo.Controls.Add(this.pbLogo);
             this.PanelLogo.Location = new System.Drawing.Point(0, 0);
             this.PanelLogo.Name = "PanelLogo";
             this.PanelLogo.Size = new System.Drawing.Size(84, 90);
@@ -137,9 +135,9 @@
             // pbLogo
             // 
             this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
-            this.pbLogo.Location = new System.Drawing.Point(3, 0);
+            this.pbLogo.Location = new System.Drawing.Point(379, 17);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(78, 87);
+            this.pbLogo.Size = new System.Drawing.Size(262, 275);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
@@ -159,6 +157,7 @@
             // 
             // PanelInterieur
             // 
+            this.PanelInterieur.Controls.Add(this.pbLogo);
             this.PanelInterieur.Controls.Add(this.tbUser);
             this.PanelInterieur.Controls.Add(this.lWelcomeSub);
             this.PanelInterieur.Controls.Add(this.lWelcome);
@@ -172,7 +171,7 @@
             this.tbUser.AutoSize = true;
             this.tbUser.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUser.ForeColor = System.Drawing.Color.Green;
-            this.tbUser.Location = new System.Drawing.Point(531, 156);
+            this.tbUser.Location = new System.Drawing.Point(492, 310);
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(111, 35);
             this.tbUser.TabIndex = 15;
@@ -183,7 +182,7 @@
             this.lWelcomeSub.AutoSize = true;
             this.lWelcomeSub.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lWelcomeSub.ForeColor = System.Drawing.Color.Green;
-            this.lWelcomeSub.Location = new System.Drawing.Point(228, 304);
+            this.lWelcomeSub.Location = new System.Drawing.Point(239, 389);
             this.lWelcomeSub.Name = "lWelcomeSub";
             this.lWelcomeSub.Size = new System.Drawing.Size(806, 35);
             this.lWelcomeSub.TabIndex = 14;
@@ -194,7 +193,7 @@
             this.lWelcome.AutoSize = true;
             this.lWelcome.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lWelcome.ForeColor = System.Drawing.Color.Green;
-            this.lWelcome.Location = new System.Drawing.Point(385, 156);
+            this.lWelcome.Location = new System.Drawing.Point(362, 310);
             this.lWelcome.Name = "lWelcome";
             this.lWelcome.Size = new System.Drawing.Size(175, 35);
             this.lWelcome.TabIndex = 13;
@@ -221,7 +220,6 @@
             this.PanelMenu.PerformLayout();
             this.msGlobal.ResumeLayout(false);
             this.msGlobal.PerformLayout();
-            this.PanelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.PanelInterieur.ResumeLayout(false);
             this.PanelInterieur.PerformLayout();
