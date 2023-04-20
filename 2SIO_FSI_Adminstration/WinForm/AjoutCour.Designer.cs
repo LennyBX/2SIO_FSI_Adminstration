@@ -79,7 +79,7 @@
             // 
             this.cbCour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCour.FormattingEnabled = true;
-            this.cbCour.Location = new System.Drawing.Point(302, 317);
+            this.cbCour.Location = new System.Drawing.Point(302, 324);
             this.cbCour.MinimumSize = new System.Drawing.Size(300, 0);
             this.cbCour.Name = "cbCour";
             this.cbCour.Size = new System.Drawing.Size(326, 28);
@@ -98,7 +98,7 @@
             // 
             // tbDesCour
             // 
-            this.tbDesCour.Location = new System.Drawing.Point(302, 132);
+            this.tbDesCour.Location = new System.Drawing.Point(302, 146);
             this.tbDesCour.MinimumSize = new System.Drawing.Size(300, 130);
             this.tbDesCour.Name = "tbDesCour";
             this.tbDesCour.Size = new System.Drawing.Size(519, 130);
