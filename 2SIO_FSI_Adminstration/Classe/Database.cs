@@ -254,6 +254,77 @@ namespace _2SIO_FSI_Adminstration.Classe
             npgsqlConnection.Close();
         }
 
+        ///////////////////////////////////
+        ///   Requêtes pour les cours   ///
+        ///////////////////////////////////
+
+        /// <summary>
+        /// Permet de récupérer une liste d'objet Cours de la BDD
+        /// </summary>
+        /// <returns></returns>
+        public List<Cours> getAllCours()
+        {
+            List<Classe> classes = getAllClasses();
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM Cours;", npgsqlConnection);
+            NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();
+
+            List<Cours> cours = new List<Cours>();
+            while (npgsqlDataReader.Read())
+            {
+                int idCours = npgsqlDataReader.GetInt32(0);
+                String libelleCours = npgsqlDataReader.GetString(1);
+                String descriptionCours = npgsqlDataReader.GetString(2);
+                Classe classeCours = new Classe();
+                foreach (Classe classe in classes)
+                {
+                    if (classe.IdClasse == npgsqlDataReader.GetInt32(4))
+                    {
+                        classeCours = classe;
+                    }
+                }
+                cours.Add(new Cours(idCours, libelleCours, descriptionCours, classeCours));
+
+            }
+            npgsqlConnection.Close();
+            return cours;
+        }
+
+        /// <summary>
+        /// Permet d'ajouter un nouvel utilisateur dans la BDD
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <param name="idclasse"></param>
+        public void newCours(Cours cours)
+        {
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("INSERT INTO cours (libellecours, descriptioncours, idclasse) VALUES (:libelle, :description, :idclasse);", npgsqlConnection);
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("libelle", NpgsqlDbType.Varchar)).Value = cours.LibelleCours;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("description", NpgsqlDbType.Varchar)).Value = cours.DescriptionCours;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("idclasse", NpgsqlDbType.Integer)).Value = cours.ClasseCours.IdClasse;
+            npgsqlCommand.Prepare();
+            npgsqlCommand.CommandType = CommandType.Text;
+            npgsqlCommand.ExecuteNonQuery();
+            npgsqlConnection.Close();
+            newLog("INSERT INTO", "Cours", "Ajout d'un nouveau cours " + cours.LibelleCours);
+        }
+
+        /// <summary>
+        /// Permet de supprimer un étudiant de la BDD
+        /// </summary>
+        /// <param name="id"></param>
+        public void deleteCours(int id)
+        {
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("DELETE FROM Cours WHERE idCours = :id;", npgsqlConnection);
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("id", NpgsqlDbType.Integer)).Value = id;
+            npgsqlCommand.Prepare();
+            npgsqlCommand.CommandType = CommandType.Text;
+            npgsqlCommand.ExecuteNonQuery();
+            npgsqlConnection.Close();
+        }
+
         /////////////////////////
         /// Requêtes diverses ///
         /////////////////////////

@@ -9,8 +9,8 @@ namespace _2SIO_FSI_Adminstration.Classe
     public class Cours
     {
         private int idCours;
-        private int libelleCours;
-        private int descriptionCours;
+        private String libelleCours;
+        private String descriptionCours;
         private Classe classeCours;
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace _2SIO_FSI_Adminstration.Classe
         /// <param name="libelleCours"></param>
         /// <param name="descriptionCours"></param>
         /// <param name="classe"></param>
-        public Cours(int idCours, int libelleCours, int descriptionCours, Classe classe)
+        public Cours(int idCours, String libelleCours, String descriptionCours, Classe classe)
         {
             this.idCours = idCours;
             this.libelleCours = libelleCours;
@@ -34,8 +34,8 @@ namespace _2SIO_FSI_Adminstration.Classe
         }
 
         public int IdCours { get => idCours; set => idCours = value; }
-        public int LibelleCours { get => libelleCours; set => libelleCours = value; }
-        public int DescriptionCours { get => descriptionCours; set => descriptionCours = value; }
+        public String LibelleCours { get => libelleCours; set => libelleCours = value; }
+        public String DescriptionCours { get => descriptionCours; set => descriptionCours = value; }
         public Classe ClasseCours { get => classeCours; set => classeCours = value; }
 
     }

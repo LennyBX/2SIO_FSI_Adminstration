@@ -76,14 +76,14 @@
             this.gestionDesCourToolStripMenuItem});
             this.msGlobal.Location = new System.Drawing.Point(0, 0);
             this.msGlobal.Name = "msGlobal";
-            this.msGlobal.Size = new System.Drawing.Size(806, 33);
+            this.msGlobal.Size = new System.Drawing.Size(806, 30);
             this.msGlobal.TabIndex = 0;
             this.msGlobal.Text = "Menu";
             // 
             // accueilToolStripMenuItem2
             // 
             this.accueilToolStripMenuItem2.Name = "accueilToolStripMenuItem2";
-            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 29);
+            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(71, 26);
             this.accueilToolStripMenuItem2.Text = "Accueil";
             // 
             // gestionEtudiantToolStripMenuItem1
@@ -93,7 +93,7 @@
             this.ajouterUnEtudiantToolStripMenuItem,
             this.supprimerUnÉtudiantToolStripMenuItem});
             this.gestionEtudiantToolStripMenuItem1.Name = "gestionEtudiantToolStripMenuItem1";
-            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(199, 29);
+            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(165, 26);
             this.gestionEtudiantToolStripMenuItem1.Text = "Gestion des étudiants";
             // 
             // listeDesEtudiantsToolStripMenuItem
@@ -113,7 +113,7 @@
             // supprimerUnÉtudiantToolStripMenuItem
             // 
             this.supprimerUnÉtudiantToolStripMenuItem.Name = "supprimerUnÉtudiantToolStripMenuItem";
-            this.supprimerUnÉtudiantToolStripMenuItem.Size = new System.Drawing.Size(292, 34);
+            this.supprimerUnÉtudiantToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.supprimerUnÉtudiantToolStripMenuItem.Text = "Supprimer un étudiant";
             this.supprimerUnÉtudiantToolStripMenuItem.Click += new System.EventHandler(this.supprimerUnÉtudiantToolStripMenuItem_Click);
             // 
@@ -124,7 +124,7 @@
             this.ajouterUneClasseToolStripMenuItem,
             this.supprimerUneClasseToolStripMenuItem});
             this.gestionClasseToolStripMenuItem.Name = "gestionClasseToolStripMenuItem";
-            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(180, 29);
+            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.gestionClasseToolStripMenuItem.Text = "Gestion des classes";
             // 
             // listeDesClassesToolStripMenuItem
@@ -144,7 +144,7 @@
             // supprimerUneClasseToolStripMenuItem
             // 
             this.supprimerUneClasseToolStripMenuItem.Name = "supprimerUneClasseToolStripMenuItem";
-            this.supprimerUneClasseToolStripMenuItem.Size = new System.Drawing.Size(282, 34);
+            this.supprimerUneClasseToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.supprimerUneClasseToolStripMenuItem.Text = "Supprimer une classe";
             // 
             // gestionDesCourToolStripMenuItem
@@ -154,25 +154,25 @@
             this.ajouterUnCoursToolStripMenuItem,
             this.supprimerUnCoursToolStripMenuItem});
             this.gestionDesCourToolStripMenuItem.Name = "gestionDesCourToolStripMenuItem";
-            this.gestionDesCourToolStripMenuItem.Size = new System.Drawing.Size(169, 29);
+            this.gestionDesCourToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
             this.gestionDesCourToolStripMenuItem.Text = "Gestion des cours";
             // 
             // listeDesCoursToolStripMenuItem
             // 
             this.listeDesCoursToolStripMenuItem.Name = "listeDesCoursToolStripMenuItem";
-            this.listeDesCoursToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.listeDesCoursToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.listeDesCoursToolStripMenuItem.Text = "Liste des cours";
             // 
             // ajouterUnCoursToolStripMenuItem
             // 
             this.ajouterUnCoursToolStripMenuItem.Name = "ajouterUnCoursToolStripMenuItem";
-            this.ajouterUnCoursToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.ajouterUnCoursToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ajouterUnCoursToolStripMenuItem.Text = "Ajouter un cours";
             // 
             // supprimerUnCoursToolStripMenuItem
             // 
             this.supprimerUnCoursToolStripMenuItem.Name = "supprimerUnCoursToolStripMenuItem";
-            this.supprimerUnCoursToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.supprimerUnCoursToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.supprimerUnCoursToolStripMenuItem.Text = "Supprimer un cours";
             // 
             // PanelLogo
