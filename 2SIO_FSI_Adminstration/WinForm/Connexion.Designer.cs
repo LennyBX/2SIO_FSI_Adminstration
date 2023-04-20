@@ -60,7 +60,7 @@
             this.lLogin.Location = new System.Drawing.Point(177, 270);
             this.lLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lLogin.Name = "lLogin";
-            this.lLogin.Size = new System.Drawing.Size(101, 34);
+            this.lLogin.Size = new System.Drawing.Size(85, 27);
             this.lLogin.TabIndex = 1;
             this.lLogin.Text = "Login";
             // 
@@ -72,7 +72,7 @@
             this.lMDP.Location = new System.Drawing.Point(122, 379);
             this.lMDP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lMDP.Name = "lMDP";
-            this.lMDP.Size = new System.Drawing.Size(192, 32);
+            this.lMDP.Size = new System.Drawing.Size(158, 26);
             this.lMDP.TabIndex = 2;
             this.lMDP.Text = "Mot de passe";
             // 
@@ -82,7 +82,7 @@
             this.tbLogin.Location = new System.Drawing.Point(293, 265);
             this.tbLogin.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(196, 39);
+            this.tbLogin.Size = new System.Drawing.Size(196, 34);
             this.tbLogin.TabIndex = 3;
             // 
             // tbMdp
@@ -92,8 +92,9 @@
             this.tbMdp.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tbMdp.Name = "tbMdp";
             this.tbMdp.PasswordChar = '*';
-            this.tbMdp.Size = new System.Drawing.Size(196, 39);
+            this.tbMdp.Size = new System.Drawing.Size(196, 34);
             this.tbMdp.TabIndex = 4;
+            this.tbMdp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbMdp_KeyDown);
             // 
             // bConnexion
             // 
@@ -111,6 +112,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(564, 46);
             this.pictureBox1.Name = "pictureBox1";
@@ -132,7 +136,7 @@
             // 
             // Connexion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1074, 561);
@@ -149,9 +153,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.MaximumSize = new System.Drawing.Size(1100, 700);
+            this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "Connexion";
-            this.Text = "Connexion";
+            this.Text = "FSI Notes - Connexion";
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

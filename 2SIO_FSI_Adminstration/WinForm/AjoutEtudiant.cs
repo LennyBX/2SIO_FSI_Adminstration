@@ -30,8 +30,7 @@ namespace _2SIO_FSI_Adminstration.WinForm
         {
             foreach (Classe.Classe cl in database.getAllClasses())
             {
-                cbClasse.Items.Add(cl.AcronymeClasse);
-
+                cbClasse.Items.Add(cl.LibelleClasse);
             }
         }
 
@@ -39,13 +38,24 @@ namespace _2SIO_FSI_Adminstration.WinForm
         {
             string nom = tbLastName.Text;
             string prenom = tbFirstName.Text;
+            string numero = tbNumero.Text;
+            string mail = tbMail.Text;
             string classe = this.cbClasse.GetItemText(this.cbClasse.SelectedItem);
-            Classe.Classe classeObj = database.getClasse(classe);
+            Classe.Classe classeObj = database.getClasseByLibelle(classe);
+            Etudiant etu = new Etudiant(0, nom, prenom, numero, mail, classeObj);
 
-            if (nom != "" && prenom != "" && classe != "")
+            if (nom != "" && prenom != "" && classe != "" && numero != "" && mail != "")
             {
-                database.newUtilisateur(nom, prenom, classeObj.IdClasse);
-                MessageBox.Show("Etudiant ajouté avec succès !");
+                if(numero.Length == 10)
+                {
+                    database.newEtudiant(etu);
+                    MessageBox.Show("Etudiant " + etu.getFullName() + " ajouté avec succès !");
+                    bClearText_Click(sender, e);
+                } else
+                {
+                    MessageBox.Show("Veuillez entrer un numéro de téléphone valide !");
+                    tbNumero.Text = "";
+                }
             }
             else
             {
@@ -58,6 +68,8 @@ namespace _2SIO_FSI_Adminstration.WinForm
         {
             tbLastName.Text = "";
             tbFirstName.Text = "";
+            tbNumero.Text = "";
+            tbMail.Text = "";
         }
 
         private void bBack_Click(object sender, EventArgs e)

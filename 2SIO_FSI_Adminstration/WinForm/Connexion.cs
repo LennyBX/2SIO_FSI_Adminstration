@@ -25,18 +25,27 @@ namespace _2SIO_FSI_Adminstration.WinForm
                 if (database.authentify(login, password) == true)
                 {
                     this.Hide();
-                    Form formAccueil = new Accueil(database.getUtilisateur(login));
+                    Form formAccueil = new Accueil(database.getUtilisateurByUsername(login));
                     formAccueil.Show();
                 }
                 else
                 {
                     MessageBox.Show("Le mot de passe est incorrect !");
-                    tbLogin.Text = "";
                     tbMdp.Text = "";
                 }
             } else
             {
                 MessageBox.Show("Vous n'êtes pas enregistré dans la BDD !");
+                tbLogin.Text = "";
+                tbMdp.Text = "";
+            }
+        }
+
+        private void tbMdp_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                bConnexion_Click((object)sender, e);
             }
         }
     }

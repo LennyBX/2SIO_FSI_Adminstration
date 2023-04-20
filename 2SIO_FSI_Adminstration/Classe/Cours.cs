@@ -13,8 +13,18 @@ namespace _2SIO_FSI_Adminstration.Classe
         private int descriptionCours;
         private Classe classeCours;
 
+        /// <summary>
+        /// Créer une instance d'objet Classe sans attribut
+        /// </summary>
         public Cours() { }
 
+        /// <summary>
+        /// Créer une instance d'objet Cours avec tous ses attributs
+        /// </summary>
+        /// <param name="idCours"></param>
+        /// <param name="libelleCours"></param>
+        /// <param name="descriptionCours"></param>
+        /// <param name="classe"></param>
         public Cours(int idCours, int libelleCours, int descriptionCours, Classe classe)
         {
             this.idCours = idCours;
