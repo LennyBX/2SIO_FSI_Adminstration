@@ -278,7 +278,7 @@ namespace _2SIO_FSI_Adminstration.Classe
                 Classe classeCours = new Classe();
                 foreach (Classe classe in classes)
                 {
-                    if (classe.IdClasse == npgsqlDataReader.GetInt32(4))
+                    if (classe.IdClasse == npgsqlDataReader.GetInt32(3))
                     {
                         classeCours = classe;
                     }

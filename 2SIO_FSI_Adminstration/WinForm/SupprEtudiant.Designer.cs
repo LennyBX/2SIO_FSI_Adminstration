@@ -38,16 +38,18 @@
             // 
             this.cbListeEtudiant.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbListeEtudiant.FormattingEnabled = true;
-            this.cbListeEtudiant.Location = new System.Drawing.Point(51, 60);
+            this.cbListeEtudiant.Location = new System.Drawing.Point(57, 75);
+            this.cbListeEtudiant.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbListeEtudiant.Name = "cbListeEtudiant";
-            this.cbListeEtudiant.Size = new System.Drawing.Size(232, 24);
+            this.cbListeEtudiant.Size = new System.Drawing.Size(260, 28);
             this.cbListeEtudiant.TabIndex = 0;
             // 
             // bSupprimer
             // 
-            this.bSupprimer.Location = new System.Drawing.Point(51, 137);
+            this.bSupprimer.Location = new System.Drawing.Point(57, 171);
+            this.bSupprimer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bSupprimer.Name = "bSupprimer";
-            this.bSupprimer.Size = new System.Drawing.Size(90, 31);
+            this.bSupprimer.Size = new System.Drawing.Size(101, 39);
             this.bSupprimer.TabIndex = 1;
             this.bSupprimer.Text = "Supprimer";
             this.bSupprimer.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // bBack
             // 
-            this.bBack.Location = new System.Drawing.Point(200, 137);
+            this.bBack.Location = new System.Drawing.Point(225, 171);
+            this.bBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bBack.Name = "bBack";
-            this.bBack.Size = new System.Drawing.Size(83, 30);
+            this.bBack.Size = new System.Drawing.Size(93, 38);
             this.bBack.TabIndex = 2;
             this.bBack.Text = "Retour";
             this.bBack.UseVisualStyleBackColor = true;
@@ -65,13 +68,14 @@
             // 
             // SupprEtudiant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 195);
+            this.ClientSize = new System.Drawing.Size(479, 244);
             this.Controls.Add(this.bBack);
             this.Controls.Add(this.bSupprimer);
             this.Controls.Add(this.cbListeEtudiant);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SupprEtudiant";
             this.Text = "FSI Notes - Supprimer un étudiant";
             this.ResumeLayout(false);
