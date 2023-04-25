@@ -76,14 +76,14 @@
             this.gestionDesCourToolStripMenuItem});
             this.msGlobal.Location = new System.Drawing.Point(0, 0);
             this.msGlobal.Name = "msGlobal";
-            this.msGlobal.Size = new System.Drawing.Size(806, 33);
+            this.msGlobal.Size = new System.Drawing.Size(806, 36);
             this.msGlobal.TabIndex = 0;
             this.msGlobal.Text = "Menu";
             // 
             // accueilToolStripMenuItem2
             // 
             this.accueilToolStripMenuItem2.Name = "accueilToolStripMenuItem2";
-            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 29);
+            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 30);
             this.accueilToolStripMenuItem2.Text = "Accueil";
             // 
             // gestionEtudiantToolStripMenuItem1
@@ -93,7 +93,7 @@
             this.ajouterUnEtudiantToolStripMenuItem,
             this.supprimerUnÉtudiantToolStripMenuItem});
             this.gestionEtudiantToolStripMenuItem1.Name = "gestionEtudiantToolStripMenuItem1";
-            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(199, 29);
+            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(199, 30);
             this.gestionEtudiantToolStripMenuItem1.Text = "Gestion des étudiants";
             // 
             // listeDesEtudiantsToolStripMenuItem
@@ -124,7 +124,7 @@
             this.ajouterUneClasseToolStripMenuItem,
             this.supprimerUneClasseToolStripMenuItem});
             this.gestionClasseToolStripMenuItem.Name = "gestionClasseToolStripMenuItem";
-            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(180, 29);
+            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.gestionClasseToolStripMenuItem.Text = "Gestion des classes";
             // 
             // listeDesClassesToolStripMenuItem
@@ -154,7 +154,7 @@
             this.ajouterUnCoursToolStripMenuItem,
             this.supprimerUnCoursToolStripMenuItem});
             this.gestionDesCourToolStripMenuItem.Name = "gestionDesCourToolStripMenuItem";
-            this.gestionDesCourToolStripMenuItem.Size = new System.Drawing.Size(169, 29);
+            this.gestionDesCourToolStripMenuItem.Size = new System.Drawing.Size(169, 30);
             this.gestionDesCourToolStripMenuItem.Text = "Gestion des cours";
             // 
             // listeDesCoursToolStripMenuItem

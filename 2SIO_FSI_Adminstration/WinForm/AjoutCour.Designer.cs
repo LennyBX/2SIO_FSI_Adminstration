@@ -102,7 +102,7 @@
             // 
             // tbDesCour
             // 
-            this.tbDesCour.Location = new System.Drawing.Point(293, 194);
+            this.tbDesCour.Location = new System.Drawing.Point(278, 202);
             this.tbDesCour.MinimumSize = new System.Drawing.Size(300, 130);
             this.tbDesCour.Name = "tbDesCour";
             this.tbDesCour.Size = new System.Drawing.Size(519, 130);
@@ -110,7 +110,7 @@
             // 
             // TbNomCour
             // 
-            this.TbNomCour.Location = new System.Drawing.Point(293, 111);
+            this.TbNomCour.Location = new System.Drawing.Point(293, 126);
             this.TbNomCour.MinimumSize = new System.Drawing.Size(300, 50);
             this.TbNomCour.Name = "TbNomCour";
             this.TbNomCour.Size = new System.Drawing.Size(300, 50);
@@ -132,7 +132,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(82, 247);
+            this.label2.Location = new System.Drawing.Point(77, 228);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(195, 35);
             this.label2.TabIndex = 17;
