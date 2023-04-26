@@ -1,15 +1,5 @@
 ﻿using _2SIO_FSI_Adminstration.Classe;
-using Npgsql;
-using NpgsqlTypes;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _2SIO_FSI_Adminstration.WinForm
@@ -46,12 +36,13 @@ namespace _2SIO_FSI_Adminstration.WinForm
 
             if (nom != "" && prenom != "" && classe != "" && numero != "" && mail != "")
             {
-                if(numero.Length == 10)
+                if (numero.Length == 10)
                 {
                     database.newEtudiant(etu);
                     MessageBox.Show("Etudiant " + etu.getFullName() + " ajouté avec succès !");
                     bClearText_Click(sender, e);
-                } else
+                }
+                else
                 {
                     MessageBox.Show("Veuillez entrer un numéro de téléphone valide !");
                     tbNumero.Text = "";

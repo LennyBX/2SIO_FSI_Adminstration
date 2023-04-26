@@ -95,7 +95,6 @@
     <Compile Include="Classe\Cours.cs" />
     <Compile Include="Classe\Database.cs" />
     <Compile Include="Classe\Etudiant.cs" />
-    <Compile Include="Layout\ToolStripMenuLayout.cs" />
     <Compile Include="WinForm\Accueil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +146,24 @@
     <Compile Include="WinForm\ListeEtudiant.Designer.cs">
       <DependentUpon>ListeEtudiant.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForm\ModifierClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\ModifierClasse.Designer.cs">
+      <DependentUpon>ModifierClasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\ModifierCours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\ModifierCours.Designer.cs">
+      <DependentUpon>ModifierCours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\ModifierEtudiant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\ModifierEtudiant.Designer.cs">
+      <DependentUpon>ModifierEtudiant.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinForm\SupprCour.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +208,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WinForm\ListeEtudiant.resx">
       <DependentUpon>ListeEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\ModifierClasse.resx">
+      <DependentUpon>ModifierClasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\ModifierCours.resx">
+      <DependentUpon>ModifierCours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\ModifierEtudiant.resx">
+      <DependentUpon>ModifierEtudiant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WinForm\SupprCour.resx">
       <DependentUpon>SupprCour.cs</DependentUpon>

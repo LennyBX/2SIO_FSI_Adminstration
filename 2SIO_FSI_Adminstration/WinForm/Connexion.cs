@@ -1,6 +1,4 @@
 ﻿using _2SIO_FSI_Adminstration.Classe;
-using Npgsql;
-using NpgsqlTypes;
 using System;
 using System.Windows.Forms;
 
@@ -12,7 +10,7 @@ namespace _2SIO_FSI_Adminstration.WinForm
 
         public Connexion()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         private void bConnexion_Click(object sender, EventArgs e)
@@ -20,7 +18,7 @@ namespace _2SIO_FSI_Adminstration.WinForm
             string login = tbLogin.Text;
             string password = tbMdp.Text;
 
-            if(database.isRegistered(login) == true)
+            if (database.isRegistered(login) == true)
             {
                 if (database.authentify(login, password) == true)
                 {
@@ -33,7 +31,8 @@ namespace _2SIO_FSI_Adminstration.WinForm
                     MessageBox.Show("Le mot de passe est incorrect !");
                     tbMdp.Text = "";
                 }
-            } else
+            }
+            else
             {
                 MessageBox.Show("Vous n'êtes pas enregistré dans la BDD !");
                 tbLogin.Text = "";

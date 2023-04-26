@@ -71,28 +71,20 @@ namespace _2SIO_FSI_Adminstration.Classe
         }
 
         /// <summary>
-        /// Permet de récupérer un objet Classe en fonction de son ID de la BDD
+        /// Modifie une classe
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public Classe getClasseById(int id)
+        /// <param name="classe"></param>
+        public void modifyClasse(Classe classe)
         {
-            Classe classe = new Classe();
-
             npgsqlConnection.Open();
-            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM classe where idclasse = :id;", npgsqlConnection);
-            npgsqlCommand.Parameters.Add(new NpgsqlParameter("id", NpgsqlDbType.Integer)).Value = id;
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("UPDATE classe SET acronymeclasse = :acronyme, libelleclasse = :libelle WHERE idclasse = :id;", npgsqlConnection);
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("id", NpgsqlDbType.Integer)).Value = classe.IdClasse;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("acronyme", NpgsqlDbType.Varchar)).Value = classe.AcronymeClasse;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("libelle", NpgsqlDbType.Varchar)).Value = classe.LibelleClasse;
             npgsqlCommand.Prepare();
-            NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();
-
-            if (npgsqlDataReader.Read())
-            {
-                classe.IdClasse = npgsqlDataReader.GetInt32(0);
-                classe.AcronymeClasse = npgsqlDataReader.GetString(1);
-                classe.LibelleClasse = npgsqlDataReader.GetString(2);
-            }
+            npgsqlCommand.ExecuteReader();
             npgsqlConnection.Close();
-            return classe;
+            newLog("UPDATE", "COURS", "Modification d'une classe " + classe.LibelleClasse);
         }
 
         /// <summary>
@@ -133,6 +125,8 @@ namespace _2SIO_FSI_Adminstration.Classe
             npgsqlCommand.CommandType = CommandType.Text;
             npgsqlCommand.ExecuteNonQuery();
             npgsqlConnection.Close();
+            newLog("INSERT INTO", "CLASSE", "Ajout d'une nouvelle classe " + libelle);
+
         }
 
         //////////////////////////////////////
@@ -252,6 +246,27 @@ namespace _2SIO_FSI_Adminstration.Classe
             npgsqlCommand.CommandType = CommandType.Text;
             npgsqlCommand.ExecuteNonQuery();
             npgsqlConnection.Close();
+            newLog("DELETE", "ETUDIANT", "Suppression de l'étudiant avec l'ID " + id);
+        }
+
+        /// <summary>
+        /// Permet de modifier un étudiant
+        /// </summary>
+        /// <param name="etu"></param>
+        public void modifyEtudiant(Etudiant etu)
+        {
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("UPDATE etudiant SET nometudiant = :nom, prenometudiant = :prenom, numeroetudiant = :numero, mailetudiant = :mail, idclasse = :idclasse WHERE idetudiant = :idetu;", npgsqlConnection);
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("nom", NpgsqlDbType.Varchar)).Value = etu.NomEtudiant;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("prenom", NpgsqlDbType.Varchar)).Value = etu.PrenomEtudiant;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("numero", NpgsqlDbType.Varchar)).Value = etu.NumeroEtudiant;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("mail", NpgsqlDbType.Varchar)).Value = etu.MailEtudiant;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("idclasse", NpgsqlDbType.Integer)).Value = etu.ClasseEtudiant.IdClasse;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("idetu", NpgsqlDbType.Integer)).Value = etu.IdEtudiant;
+            npgsqlCommand.Prepare();
+            npgsqlCommand.ExecuteReader();
+            npgsqlConnection.Close();
+            newLog("UPDATE", "ETUDIANT", "Modification d'un etudiant " + etu.getFullName());
         }
 
         ///////////////////////////////////
@@ -323,6 +338,22 @@ namespace _2SIO_FSI_Adminstration.Classe
             npgsqlCommand.CommandType = CommandType.Text;
             npgsqlCommand.ExecuteNonQuery();
             npgsqlConnection.Close();
+            newLog("DELETE", "COURS", "Suppression du cours avec l'ID " + id);
+
+        }
+
+        public void modifyCours(Cours cours)
+        {
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("UPDATE cours SET libellecours = :libelle, descriptioncours = :description, idclasse = :idclasse WHERE idcours = :idcours;", npgsqlConnection);
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("libelle", NpgsqlDbType.Varchar)).Value = cours.LibelleCours;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("description", NpgsqlDbType.Varchar)).Value = cours.DescriptionCours;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("idclasse", NpgsqlDbType.Integer)).Value = cours.ClasseCours.IdClasse;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("idcours", NpgsqlDbType.Integer)).Value = cours.IdCours;
+            npgsqlCommand.Prepare();
+            npgsqlCommand.ExecuteReader();
+            npgsqlConnection.Close();
+            newLog("UPDATE", "COURS", "Modification d'un cours " + cours.LibelleCours);
         }
 
         /////////////////////////

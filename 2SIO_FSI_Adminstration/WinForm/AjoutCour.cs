@@ -1,12 +1,5 @@
 ﻿using _2SIO_FSI_Adminstration.Classe;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _2SIO_FSI_Adminstration.WinForm
@@ -40,13 +33,13 @@ namespace _2SIO_FSI_Adminstration.WinForm
             Cours cr = new Cours(0, nom, description, classeObj);
 
 
-            if (nom != ""  && description != "")
+            if (nom != "" && description != "")
             {
-               
-                    database.newCours(cr);
-                    MessageBox.Show("Cour " + cr.LibelleCours + " ajouté avec succès !");
-                    
-              
+
+                database.newCours(cr);
+                MessageBox.Show("Cour " + cr.LibelleCours + " ajouté avec succès !");
+
+
             }
             else
             {
@@ -69,5 +62,5 @@ namespace _2SIO_FSI_Adminstration.WinForm
         }
     }
 
- 
+
 }

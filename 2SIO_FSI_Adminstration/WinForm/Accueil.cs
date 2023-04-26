@@ -80,5 +80,28 @@ namespace _2SIO_FSI_Adminstration
             Form newForm = new ListeCour(utilisateur);
             newForm.Show();
         }
+
+        private void modifierUneClasseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new ModifierClasse(utilisateur);
+            newForm.Show();
+
+        }
+
+        private void modifierUnÉtudiantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new ModifierEtudiant(utilisateur);
+            newForm.Show();
+
+        }
+
+        private void modifierUnCoursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new ModifierCours(utilisateur);
+            newForm.Show();
+        }
     }
 }
