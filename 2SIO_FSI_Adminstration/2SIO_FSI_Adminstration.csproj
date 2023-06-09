@@ -176,6 +176,12 @@
     <Compile Include="WinForm\SupprEtudiant.Designer.cs">
       <DependentUpon>SupprEtudiant.cs</DependentUpon>
     </Compile>
+    <Compile Include="WinForm\SuprrClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\SuprrClasse.Designer.cs">
+      <DependentUpon>SuprrClasse.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="WinForm\Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WinForm\SupprEtudiant.resx">
       <DependentUpon>SupprEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\SuprrClasse.resx">
+      <DependentUpon>SuprrClasse.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

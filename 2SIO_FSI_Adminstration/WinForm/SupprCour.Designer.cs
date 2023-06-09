@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupprCour));
             this.bClearText = new System.Windows.Forms.Button();
             this.bBack = new System.Windows.Forms.Button();
             this.cbListeCour = new System.Windows.Forms.ComboBox();
@@ -36,9 +37,9 @@
             // 
             // bClearText
             // 
-            this.bClearText.BackColor = System.Drawing.Color.Honeydew;
+            this.bClearText.BackColor = System.Drawing.Color.DarkGreen;
             this.bClearText.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bClearText.ForeColor = System.Drawing.Color.DarkGreen;
+            this.bClearText.ForeColor = System.Drawing.Color.Ivory;
             this.bClearText.Location = new System.Drawing.Point(268, 273);
             this.bClearText.Name = "bClearText";
             this.bClearText.Size = new System.Drawing.Size(210, 55);
@@ -49,9 +50,9 @@
             // 
             // bBack
             // 
-            this.bBack.BackColor = System.Drawing.Color.Honeydew;
+            this.bBack.BackColor = System.Drawing.Color.DarkGreen;
             this.bBack.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBack.ForeColor = System.Drawing.Color.DarkGreen;
+            this.bBack.ForeColor = System.Drawing.Color.Ivory;
             this.bBack.Location = new System.Drawing.Point(584, 367);
             this.bBack.Name = "bBack";
             this.bBack.Size = new System.Drawing.Size(175, 55);
@@ -64,7 +65,7 @@
             // 
             this.cbListeCour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbListeCour.FormattingEnabled = true;
-            this.cbListeCour.Location = new System.Drawing.Point(220, 175);
+            this.cbListeCour.Location = new System.Drawing.Point(223, 177);
             this.cbListeCour.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbListeCour.Name = "cbListeCour";
             this.cbListeCour.Size = new System.Drawing.Size(351, 28);
@@ -77,9 +78,9 @@
             this.label1.ForeColor = System.Drawing.Color.DarkGreen;
             this.label1.Location = new System.Drawing.Point(226, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 32);
+            this.label1.Size = new System.Drawing.Size(349, 32);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Suprimmez votre cour";
+            this.label1.Text = "Suprimmez votre cours";
             // 
             // SupprCour
             // 
@@ -90,8 +91,9 @@
             this.Controls.Add(this.cbListeCour);
             this.Controls.Add(this.bBack);
             this.Controls.Add(this.bClearText);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SupprCour";
-            this.Text = "SupprCour";
+            this.Text = "FSI Notes - Suprimmer un Cour";
             this.ResumeLayout(false);
             this.PerformLayout();
 

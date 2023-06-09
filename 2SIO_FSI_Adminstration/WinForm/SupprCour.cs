@@ -21,10 +21,10 @@ namespace _2SIO_FSI_Adminstration.WinForm
         {
             utilisateur = utilisateur1;
             InitializeComponent();
-            refreshEtudiantList();
+            refreshCourList();
         }
 
-        public void refreshEtudiantList()
+        public void refreshCourList()
         {
             cbListeCour.Items.Clear();
              cour = database.getAllCours();
@@ -52,7 +52,7 @@ namespace _2SIO_FSI_Adminstration.WinForm
                     {
                         database.deleteCours(cr.IdCours);
                         MessageBox.Show("Cour " + cr.LibelleCours + " supprimé avec succès !");
-                        refreshEtudiantList();
+                        refreshCourList();
                     }
                 }
             }

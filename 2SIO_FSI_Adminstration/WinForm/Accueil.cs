@@ -103,5 +103,12 @@ namespace _2SIO_FSI_Adminstration
             Form newForm = new ModifierCours(utilisateur);
             newForm.Show();
         }
+
+        private void supprimerUneClasseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new SuprrClasse(utilisateur);
+            newForm.Show();
+        }
     }
 }

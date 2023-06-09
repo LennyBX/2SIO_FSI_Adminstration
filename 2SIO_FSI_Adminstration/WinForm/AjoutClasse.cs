@@ -26,10 +26,11 @@ namespace _2SIO_FSI_Adminstration.WinForm
         private void bConfirm_Click(object sender, EventArgs e)
         {
             string libelle = tbLibelleClasse.Text;
+            string Acr = textBox2.Text;
 
             if (libelle != "")
             {
-                database.newClasse(libelle);
+                database.newClasse(libelle, Acr);
                 MessageBox.Show("Classe ajoutée avec succès !");
             }
             else

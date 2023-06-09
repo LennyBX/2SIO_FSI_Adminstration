@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListeEtudiant));
             this.PanelLogo = new System.Windows.Forms.Panel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.bQuitter = new System.Windows.Forms.Button();
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.msGlobal = new System.Windows.Forms.MenuStrip();
             this.accueilToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,19 +75,6 @@
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
-            // 
-            // bQuitter
-            // 
-            this.bQuitter.BackColor = System.Drawing.Color.Green;
-            this.bQuitter.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bQuitter.ForeColor = System.Drawing.Color.Transparent;
-            this.bQuitter.Location = new System.Drawing.Point(1220, 39);
-            this.bQuitter.Name = "bQuitter";
-            this.bQuitter.Size = new System.Drawing.Size(153, 50);
-            this.bQuitter.TabIndex = 7;
-            this.bQuitter.Text = "Quitter";
-            this.bQuitter.UseVisualStyleBackColor = false;
-            this.bQuitter.Click += new System.EventHandler(this.bQuitter_Click);
             // 
             // PanelMenu
             // 
@@ -245,9 +231,9 @@
             // 
             // bFermer
             // 
-            this.bFermer.BackColor = System.Drawing.Color.Green;
+            this.bFermer.BackColor = System.Drawing.Color.DarkGreen;
             this.bFermer.ForeColor = System.Drawing.Color.Transparent;
-            this.bFermer.Location = new System.Drawing.Point(1220, 105);
+            this.bFermer.Location = new System.Drawing.Point(1220, 39);
             this.bFermer.Name = "bFermer";
             this.bFermer.Size = new System.Drawing.Size(153, 47);
             this.bFermer.TabIndex = 13;
@@ -262,12 +248,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1385, 577);
             this.Controls.Add(this.dgvEtudiants);
-            this.Controls.Add(this.bQuitter);
             this.Controls.Add(this.bFermer);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.PanelLogo);
             this.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.Green;
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -288,7 +273,6 @@
 
         private System.Windows.Forms.Panel PanelLogo;
         private System.Windows.Forms.PictureBox pbLogo;
-        private System.Windows.Forms.Button bQuitter;
         private System.Windows.Forms.Panel PanelMenu;
         //   private P2022_Appli_AdministrationDataSetTableAdapters.etudiantTableAdapter etudiantTableAdapter;
         private System.Windows.Forms.Button bFermer;

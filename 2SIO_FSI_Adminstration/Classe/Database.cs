@@ -116,17 +116,35 @@ namespace _2SIO_FSI_Adminstration.Classe
         /// Permet d'ajouter une nouvelle classe dans la BDD
         /// </summary>
         /// <param name="libelle"></param>
-        public void newClasse(String libelle)
+        public void newClasse(String libelle, String Acronyme)
         {
             npgsqlConnection.Open();
-            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("INSERT INTO classe (libelleclasse) VALUES (:libelle);", npgsqlConnection);
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("INSERT INTO classe (libelleclasse,acronymeclasse) VALUES (:libelle,:acronymeclasse);", npgsqlConnection);
             npgsqlCommand.Parameters.Add(new NpgsqlParameter("libelle", NpgsqlDbType.Varchar)).Value = libelle;
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("acronymeclasse", NpgsqlDbType.Varchar)).Value = Acronyme;
             npgsqlCommand.Prepare();
             npgsqlCommand.CommandType = CommandType.Text;
             npgsqlCommand.ExecuteNonQuery();
             npgsqlConnection.Close();
-            newLog("INSERT INTO", "CLASSE", "Ajout d'une nouvelle classe " + libelle);
+            newLog("INSERT INTO", "CLASSE", "Ajout d'une nouvelle classe " + libelle + Acronyme);
 
+        }
+
+
+        /// <summary>
+        /// Permet de supprimer un étudiant de la BDD
+        /// </summary>
+        /// <param name="id"></param>
+        public void deleteClasse(int id)
+        {
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("DELETE FROM classe WHERE idClasse = :id;", npgsqlConnection);
+            npgsqlCommand.Parameters.Add(new NpgsqlParameter("id", NpgsqlDbType.Integer)).Value = id;
+            npgsqlCommand.Prepare();
+            npgsqlCommand.CommandType = CommandType.Text;
+            npgsqlCommand.ExecuteNonQuery();
+            npgsqlConnection.Close();
+            newLog("DELETE", "CLASSE", "Suppression de la classe avec l'ID " + id);
         }
 
         //////////////////////////////////////

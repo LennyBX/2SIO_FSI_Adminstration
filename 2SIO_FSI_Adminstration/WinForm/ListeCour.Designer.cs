@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListeCour));
             this.bQuitter = new System.Windows.Forms.Button();
             this.dgvCour = new System.Windows.Forms.DataGridView();
             this.nomEtudiant = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,12 +54,12 @@
             // 
             // bQuitter
             // 
-            this.bQuitter.BackColor = System.Drawing.Color.Green;
+            this.bQuitter.BackColor = System.Drawing.Color.DarkGreen;
             this.bQuitter.Font = new System.Drawing.Font("Cooper Black", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bQuitter.ForeColor = System.Drawing.Color.Transparent;
-            this.bQuitter.Location = new System.Drawing.Point(1217, 52);
+            this.bQuitter.Location = new System.Drawing.Point(1215, 52);
             this.bQuitter.Name = "bQuitter";
-            this.bQuitter.Size = new System.Drawing.Size(161, 42);
+            this.bQuitter.Size = new System.Drawing.Size(163, 49);
             this.bQuitter.TabIndex = 8;
             this.bQuitter.Text = "Fermer";
             this.bQuitter.UseVisualStyleBackColor = false;
@@ -114,14 +115,14 @@
             this.gestionDesCourToolStripMenuItem});
             this.msGlobal.Location = new System.Drawing.Point(0, 0);
             this.msGlobal.Name = "msGlobal";
-            this.msGlobal.Size = new System.Drawing.Size(1390, 36);
+            this.msGlobal.Size = new System.Drawing.Size(1390, 33);
             this.msGlobal.TabIndex = 10;
             this.msGlobal.Text = "Menu";
             // 
             // accueilToolStripMenuItem2
             // 
             this.accueilToolStripMenuItem2.Name = "accueilToolStripMenuItem2";
-            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 30);
+            this.accueilToolStripMenuItem2.Size = new System.Drawing.Size(83, 29);
             this.accueilToolStripMenuItem2.Text = "Accueil";
             // 
             // gestionEtudiantToolStripMenuItem1
@@ -131,7 +132,7 @@
             this.ajouterUnEtudiantToolStripMenuItem,
             this.supprimerUnÉtudiantToolStripMenuItem});
             this.gestionEtudiantToolStripMenuItem1.Name = "gestionEtudiantToolStripMenuItem1";
-            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(199, 30);
+            this.gestionEtudiantToolStripMenuItem1.Size = new System.Drawing.Size(199, 29);
             this.gestionEtudiantToolStripMenuItem1.Text = "Gestion des étudiants";
             // 
             // listeDesEtudiantsToolStripMenuItem
@@ -159,7 +160,7 @@
             this.ajouterUneClasseToolStripMenuItem,
             this.supprimerUneClasseToolStripMenuItem});
             this.gestionClasseToolStripMenuItem.Name = "gestionClasseToolStripMenuItem";
-            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.gestionClasseToolStripMenuItem.Size = new System.Drawing.Size(180, 29);
             this.gestionClasseToolStripMenuItem.Text = "Gestion des classes";
             // 
             // listeDesClassesToolStripMenuItem
@@ -187,7 +188,7 @@
             this.ajouterUnCoursToolStripMenuItem,
             this.supprimerUnCoursToolStripMenuItem});
             this.gestionDesCourToolStripMenuItem.Name = "gestionDesCourToolStripMenuItem";
-            this.gestionDesCourToolStripMenuItem.Size = new System.Drawing.Size(169, 30);
+            this.gestionDesCourToolStripMenuItem.Size = new System.Drawing.Size(169, 29);
             this.gestionDesCourToolStripMenuItem.Text = "Gestion des cours";
             // 
             // listeDesCoursToolStripMenuItem
@@ -216,8 +217,10 @@
             this.Controls.Add(this.msGlobal);
             this.Controls.Add(this.dgvCour);
             this.Controls.Add(this.bQuitter);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ListeCour";
-            this.Text = "Form1";
+            this.Text = "FSI Notes - Liste Cours";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCour)).EndInit();
             this.msGlobal.ResumeLayout(false);
             this.msGlobal.PerformLayout();

@@ -47,3 +47,4 @@ CREATE TABLE LOG (
    dateLog DATE NOT NULL,
    CONSTRAINT log_PK PRIMARY KEY(idLog)
 );
+

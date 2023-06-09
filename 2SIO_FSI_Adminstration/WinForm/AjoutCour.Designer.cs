@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjoutCour));
             this.bAddCour = new System.Windows.Forms.Button();
             this.bClearText = new System.Windows.Forms.Button();
             this.bBack = new System.Windows.Forms.Button();
@@ -42,10 +43,10 @@
             // 
             // bAddCour
             // 
-            this.bAddCour.BackColor = System.Drawing.Color.Honeydew;
+            this.bAddCour.BackColor = System.Drawing.Color.DarkGreen;
             this.bAddCour.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAddCour.ForeColor = System.Drawing.Color.DarkGreen;
-            this.bAddCour.Location = new System.Drawing.Point(320, 427);
+            this.bAddCour.ForeColor = System.Drawing.Color.FloralWhite;
+            this.bAddCour.Location = new System.Drawing.Point(357, 505);
             this.bAddCour.Name = "bAddCour";
             this.bAddCour.Size = new System.Drawing.Size(174, 55);
             this.bAddCour.TabIndex = 7;
@@ -55,10 +56,10 @@
             // 
             // bClearText
             // 
-            this.bClearText.BackColor = System.Drawing.Color.Honeydew;
+            this.bClearText.BackColor = System.Drawing.Color.DarkGreen;
             this.bClearText.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bClearText.ForeColor = System.Drawing.Color.DarkGreen;
-            this.bClearText.Location = new System.Drawing.Point(729, 351);
+            this.bClearText.ForeColor = System.Drawing.Color.Ivory;
+            this.bClearText.Location = new System.Drawing.Point(810, 457);
             this.bClearText.Name = "bClearText";
             this.bClearText.Size = new System.Drawing.Size(172, 55);
             this.bClearText.TabIndex = 10;
@@ -68,10 +69,10 @@
             // 
             // bBack
             // 
-            this.bBack.BackColor = System.Drawing.Color.Honeydew;
+            this.bBack.BackColor = System.Drawing.Color.DarkGreen;
             this.bBack.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bBack.ForeColor = System.Drawing.Color.DarkGreen;
-            this.bBack.Location = new System.Drawing.Point(729, 427);
+            this.bBack.ForeColor = System.Drawing.Color.Ivory;
+            this.bBack.Location = new System.Drawing.Point(807, 534);
             this.bBack.Name = "bBack";
             this.bBack.Size = new System.Drawing.Size(175, 55);
             this.bBack.TabIndex = 11;
@@ -83,7 +84,7 @@
             // 
             this.cbClasse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClasse.FormattingEnabled = true;
-            this.cbClasse.Location = new System.Drawing.Point(293, 361);
+            this.cbClasse.Location = new System.Drawing.Point(293, 370);
             this.cbClasse.MinimumSize = new System.Drawing.Size(300, 0);
             this.cbClasse.Name = "cbClasse";
             this.cbClasse.Size = new System.Drawing.Size(404, 28);
@@ -102,18 +103,16 @@
             // 
             // tbDesCour
             // 
-            this.tbDesCour.Location = new System.Drawing.Point(278, 202);
-            this.tbDesCour.MinimumSize = new System.Drawing.Size(300, 130);
+            this.tbDesCour.Location = new System.Drawing.Point(293, 253);
             this.tbDesCour.Name = "tbDesCour";
-            this.tbDesCour.Size = new System.Drawing.Size(519, 130);
+            this.tbDesCour.Size = new System.Drawing.Size(519, 26);
             this.tbDesCour.TabIndex = 14;
             // 
             // TbNomCour
             // 
-            this.TbNomCour.Location = new System.Drawing.Point(293, 126);
-            this.TbNomCour.MinimumSize = new System.Drawing.Size(300, 50);
+            this.TbNomCour.Location = new System.Drawing.Point(311, 135);
             this.TbNomCour.Name = "TbNomCour";
-            this.TbNomCour.Size = new System.Drawing.Size(300, 50);
+            this.TbNomCour.Size = new System.Drawing.Size(300, 26);
             this.TbNomCour.TabIndex = 15;
             // 
             // lNom
@@ -132,7 +131,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label2.Location = new System.Drawing.Point(77, 228);
+            this.label2.Location = new System.Drawing.Point(80, 253);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(195, 35);
             this.label2.TabIndex = 17;
@@ -145,15 +144,15 @@
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
             this.label3.Location = new System.Drawing.Point(314, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(284, 32);
+            this.label3.Size = new System.Drawing.Size(297, 32);
             this.label3.TabIndex = 18;
-            this.label3.Text = "Ajouter votre cour";
+            this.label3.Text = "Ajouter votre cours";
             // 
             // AjoutCour
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(939, 505);
+            this.ClientSize = new System.Drawing.Size(1004, 618);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lNom);
@@ -164,8 +163,9 @@
             this.Controls.Add(this.bBack);
             this.Controls.Add(this.bClearText);
             this.Controls.Add(this.bAddCour);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjoutCour";
-            this.Text = "AjoutCour";
+            this.Text = "FSI Notes - Ajout Cours";
             this.Load += new System.EventHandler(this.AjoutCour_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
