@@ -1,5 +1,6 @@
 ﻿using _2SIO_FSI_Adminstration.Classe;
 using _2SIO_FSI_Adminstration.WinForm;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -9,12 +10,23 @@ namespace _2SIO_FSI_Adminstration
     public partial class Accueil : Form
     {
         Utilisateur utilisateur;
+        Database database = new Database();
 
         public Accueil(Utilisateur utilisateur1)
         {
             InitializeComponent();
             utilisateur = utilisateur1;
             tbUser.Text = utilisateur1.LoginUtilisateur;
+
+            // database.createProfesseur();
+            // database.addProfs();
+
+            var message = string.Join(Environment.NewLine, database.getAllProfesseurs());
+            MessageBox.Show(message);
+
+            var message2 = string.Join(Environment.NewLine, database.getLogs());
+            MessageBox.Show(message2);
+
         }
 
         private void bQuitter_Click(object sender, EventArgs e)

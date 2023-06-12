@@ -41,15 +41,27 @@ namespace _2SIO_FSI_Adminstration.WinForm
 
         private void bModify_Click(object sender, EventArgs e)
         {
-            mainEtu.PrenomEtudiant = tbFirstName.Text;
-            mainEtu.NomEtudiant = tbLastName.Text;
-            mainEtu.MailEtudiant = tbMail.Text;
-            mainEtu.NumeroEtudiant = tbNumero.Text;
-            mainEtu.ClasseEtudiant = database.getClasseByLibelle(this.cbListeClasse.GetItemText(this.cbListeClasse.SelectedItem));
-            
-            database.modifyEtudiant(mainEtu);
-            refreshListeEtudiants();
-            MessageBox.Show("Etudiant " + mainEtu.getFullName() + " modifié avec succès !");
+            if (tbNumero.Text.Length == 10)
+            {
+                mainEtu.PrenomEtudiant = tbFirstName.Text;
+                mainEtu.NomEtudiant = tbLastName.Text;
+                mainEtu.MailEtudiant = tbMail.Text;
+                mainEtu.NumeroEtudiant = tbNumero.Text;
+                mainEtu.ClasseEtudiant = database.getClasseByLibelle(this.cbListeClasse.GetItemText(this.cbListeClasse.SelectedItem));
+
+                database.modifyEtudiant(mainEtu);
+                refreshListeEtudiants();
+                MessageBox.Show("Etudiant " + mainEtu.getFullName() + " modifié avec succès !");
+
+                tbFirstName.Enabled = false;
+                tbLastName.Enabled = false;
+                tbMail.Enabled = false;
+                tbNumero.Enabled = false;
+                cbListeClasse.Enabled = false;
+            } else
+            {
+                MessageBox.Show("Veuillez entrer un numéro de téléphone valide !");
+            }
         }
 
         private void bBack_Click(object sender, EventArgs e)
@@ -61,6 +73,13 @@ namespace _2SIO_FSI_Adminstration.WinForm
 
         private void cbListeEtudiant_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            tbFirstName.Enabled = true;
+            tbLastName.Enabled = true;
+            tbMail.Enabled = true;
+            tbNumero.Enabled = true;
+            cbListeClasse.Enabled = true;
+
             string etudiant = this.cbListeEtudiant.GetItemText(this.cbListeEtudiant.SelectedItem);
             List<Etudiant> etudiants = database.getAllEtudiants();
             foreach(Etudiant etu in etudiants)

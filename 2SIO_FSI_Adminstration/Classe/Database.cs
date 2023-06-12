@@ -414,5 +414,73 @@ namespace _2SIO_FSI_Adminstration.Classe
             return false;
         }
 
+        // MODIFICATION EPREUVE E5
+
+        public void createProfesseur()
+        {
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("CREATE TABLE PROFESSEUR(" +
+                "idProf serial," +
+                "prenomProf VARCHAR(255)," +
+                "nomProf VARCHAR(255)," +
+                "numProf VARCHAR(255)," +
+                "mailProf VARCHAR(255));", npgsqlConnection);
+            npgsqlCommand.ExecuteReader();
+            npgsqlConnection.Close();
+            newLog("CREATE", "PROFESSEUR", "Création de la table professeur !");
+        }
+
+        public void addProfs()
+        {
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("INSERT INTO PROFESSEUR (prenomProf, nomProf, numProf, mailProf) VALUES ('Magali', 'GOUDET', '0951820355', 'm.goudet@ort.fr');", npgsqlConnection);
+            npgsqlCommand.ExecuteReader();
+            npgsqlConnection.Close();
+
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand2 = new NpgsqlCommand("INSERT INTO PROFESSEUR (prenomProf, nomProf, numProf, mailProf) VALUES ('Bruno', 'LAMARD', '0138465537', 'b.lamard@ort.fr');", npgsqlConnection);
+            npgsqlCommand2.ExecuteReader();
+            npgsqlConnection.Close();
+
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand3 = new NpgsqlCommand("INSERT INTO PROFESSEUR (prenomProf, nomProf, numProf, mailProf) VALUES ('Carl', 'JOHNSON', '0681635488', 'c.johnson@ort.fr');", npgsqlConnection);
+            npgsqlCommand3.ExecuteReader();
+            npgsqlConnection.Close();
+
+            newLog("INSERT INTO", "PROFESSEUR", "Jeux de tests créés pour la table professeur !");
+        }
+
+        public List<string> getAllProfesseurs()
+        {
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM Professeur;", npgsqlConnection);
+            NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();
+
+            List<string> profs = new List<string>();
+            while (npgsqlDataReader.Read())
+            {
+                profs.Add(npgsqlDataReader.GetString(1));
+
+            }
+            npgsqlConnection.Close();
+            return profs;
+        }
+
+        public List<string> getLogs()
+        {
+            npgsqlConnection.Open();
+            NpgsqlCommand npgsqlCommand = new NpgsqlCommand("SELECT * FROM Log;", npgsqlConnection);
+            NpgsqlDataReader npgsqlDataReader = npgsqlCommand.ExecuteReader();
+
+            List<string> logs = new List<string>();
+            while (npgsqlDataReader.Read())
+            {
+                logs.Add(npgsqlDataReader.GetString(3));
+
+            }
+            npgsqlConnection.Close();
+            return logs;
+        }
+
     }
 }

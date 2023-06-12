@@ -34,25 +34,92 @@ namespace _2SIO_FSI_Adminstration.WinForm
             formAccueil.Show();
         }
 
-        private void listeDesEtudiantsToolStripMenuItem_Click(object sender, EventArgs e)
+        /// Début du code des ToolStripMenu.
+        private void listeDesEtudiantsToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Form formListeEtudiant = new ListeEtudiant(utilisateur);
-            formListeEtudiant.Show();
+            Form newForm = new ListeEtudiant(utilisateur);
+            newForm.Show();
         }
 
-        private void ajouterUnEtudiantToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ajouterUnEtudiantToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Form formAjouterEtudiant = new AjoutEtudiant(utilisateur);
-            formAjouterEtudiant.Show();
+            Form newForm = new AjoutEtudiant(utilisateur);
+            newForm.Show();
         }
 
-        private void accueilToolStripMenuItem2_Click(object sender, EventArgs e)
+        private void listeDesClassesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
-            Form formAccueil = new Accueil(utilisateur);
-            formAccueil.Show();
+            Form newForm = new ListeClasse(utilisateur);
+            newForm.Show();
         }
+
+        private void ajouterUneClasseToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new AjoutClasse(utilisateur);
+            newForm.Show();
+        }
+
+        private void supprimerUnÉtudiantToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new SupprEtudiant(utilisateur);
+            newForm.Show();
+        }
+
+        private void ajouterUnCoursToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new AjoutCour(utilisateur);
+            newForm.Show();
+        }
+
+        private void supprimerUnCoursToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new SupprCour(utilisateur);
+            newForm.Show();
+        }
+
+        private void listeDesCoursToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new ListeCour(utilisateur);
+            newForm.Show();
+        }
+
+        private void modifierUneClasseToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new ModifierClasse(utilisateur);
+            newForm.Show();
+
+        }
+
+        private void modifierUnÉtudiantToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new ModifierEtudiant(utilisateur);
+            newForm.Show();
+
+        }
+
+        private void modifierUnCoursToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new ModifierCours(utilisateur);
+            newForm.Show();
+        }
+
+        private void supprimerUneClasseToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            Form newForm = new SuprrClasse(utilisateur);
+            newForm.Show();
+        }
+
     }
 }
